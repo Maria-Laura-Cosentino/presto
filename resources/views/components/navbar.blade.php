@@ -9,12 +9,29 @@
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="#">Home</a>
           </li>
+          @if(Auth::user() == null)
           <li class="nav-item">
             <a class="nav-link" href="{{route('login')}}">Login</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="{{route('register')}}">Registrati</a>
           </li>
+          @else
+          <li class="nav-item">
+            <a class="nav-link" href="#">Inserisci annuncio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Admin {{Auth::user()->name}} </a>
+          </li>
+        
+          <li class="nav-item">
+            <form action="{{route('logout')}}" method="POST">
+              @csrf
+            <button class="btn btn-danger text-white">Logout</button>
+            </form>
+          </li>
+          @endif
+         
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Dropdown
