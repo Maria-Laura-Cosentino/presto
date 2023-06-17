@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::create('announcements', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('user_id')->references('id')->on('users');
             $table->unsignedBigInteger('category_id')->references('id')->on('categories');
             $table->string('title');
             $table->text('body');

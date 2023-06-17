@@ -2,21 +2,24 @@
 
 namespace App\Http\Livewire;
 
-use App\Models\Announcement;
 use Livewire\Component;
+use App\Models\Category;
+use App\Models\Announcement;
+use Illuminate\Support\Facades\Auth;
 
 class CreateAnnouncementForm extends Component
 {
     public $title;
     public $category_id;
+    public $user_id;
     public $price;
     public $body;
 
     protected $rules = [
-        'title' => 'required|min:6',
+        'title' => 'required|min:2',
         'price' => 'required',
         'category_id' => 'required',
-        'body' => 'required|min:20'
+        'body' => 'required|min:2'
     ];
 
      protected $messages = [
@@ -46,6 +49,7 @@ class CreateAnnouncementForm extends Component
         Announcement::create([
 
             'category_id' =>  $this->category_id,
+            'user_id' => Auth::user()->id,
             'title' => $this->title,
             'price' => $this->price,
             'body' => $this->body
@@ -66,6 +70,6 @@ class CreateAnnouncementForm extends Component
 
     public function render()
     {
-        return view('livewire.create-announcement-form');
+        return view('livewire.create-announcement-form', ['categories' => Category::all()]);
     }
 }

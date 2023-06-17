@@ -17,6 +17,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/announcement/create', function(){
-    return view('announcement.create');
-})->name('announcement.create');
+Route::middleware(['auth'])->group(function (){
+    Route::get('/announcement/create', function(){
+        return view('announcement.create');
+    })->name('announcement.create');
+});
+
+
