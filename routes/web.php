@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PublicController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,14 +14,16 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [PublicController::class, 'show'])->name('home');
+
+Route::get('/categoria/{category}', [PublicController::class, 'categoryShow'])->name('categoryShow');
 
 Route::middleware(['auth'])->group(function (){
+
     Route::get('/announcement/create', function(){
         return view('announcement.create');
     })->name('announcement.create');
 });
 
+Route::get('announcement/detail/{announcement}', [PublicController::class, 'detailShow'])->name('detailShow');
 

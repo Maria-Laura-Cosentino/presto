@@ -27,6 +27,10 @@
 
                 @error('category_id') <span class="error">{{ $message }}</span> @enderror
             </div>
+
+            {{-- <div class="input-group mb-3">
+                <input type="file" name="img" class="form-control" placeholder="Immagine" aria-label="Img" aria-describedby="basic-addon1" wire:model="img">        
+            </div>         --}}
             
 
             {{-- <div class="form-floating">
