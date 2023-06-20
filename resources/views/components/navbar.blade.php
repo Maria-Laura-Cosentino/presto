@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark py-3">
     <div class="container-fluid">
       <a class="navbar-brand" href="{{route('home')}}"><i class="fa-brands fa-artstation text-white"></i></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -20,6 +20,16 @@
           <li class="nav-item">
             <a class="nav-link" href="{{ route('announcement.create')}}">Inserisci annuncio</a>
           </li>
+          @if (Auth::user()->is_revisor)
+            <li class="nav-item">
+              <a class="nav-link btn btn-outline-success btn-sm position-relative" aria-current="page" href="{{route('revisor.index')}}">Zona revisore
+                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                  {{App\Models\Announcement::toBeRevisionedCount()}}
+                  <span class="visually-hidden">Unread messages</span>
+                </span>  
+              </a>
+            </li>
+          @endif 
           <li class="nav-item">
             <a class="nav-link" href="#">Admin {{Auth::user()->name}} </a>
           </li>

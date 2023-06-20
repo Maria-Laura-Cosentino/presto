@@ -10,7 +10,7 @@ class PublicController extends Controller
 {
     public function show(){
         // $announcements = Announcement::all();
-        $announcements = Announcement::orderBy('created_at','desc')->take(6)->get();        
+        $announcements = Announcement::where('is_accepted', true)->orderBy('created_at','desc')->take(6)->get();        
         return view('home',compact('announcements'));  
     
     }
