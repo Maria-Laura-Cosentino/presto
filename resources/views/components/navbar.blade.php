@@ -1,13 +1,27 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark py-3">
+<nav class="navbar navbar-expand-lg py-3">
     <div class="container-fluid">
-      <a class="navbar-brand" href="{{route('home')}}"><i class="fa-brands fa-artstation text-white"></i></a>
+      <a class="navbar-brand" href="{{route('home')}}"><i class="fa-brands fa-artstation fs-3 "></i><span class="fw-semibold ms-2">Presto.it</span></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="{{route('home')}}">Home</a>
+            <a class="nav-link" aria-current="page" href="{{route('home')}}">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{route('indexShow')}}">Annunci</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Categorie
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="categoriesDropdown">
+              @foreach ($categories as $category)                  
+              <li><a class="dropdown-item" href="{{route('categoryShow', compact('category'))}}"> {{($category->name)}} </a></li>
+              <li><hr class="dropdown-divider"></li>
+              @endforeach
+            </ul>
           </li>
           @if(Auth::user() == null)
           <li class="nav-item">
@@ -18,7 +32,7 @@
           </li>
           @else
           <li class="nav-item">
-            <a class="nav-link" href="{{ route('announcement.create')}}">Inserisci annuncio</a>
+            <a class="nav-link" href="{{ route('announcement.create')}}">Nuovo annuncio</a>
           </li>
           @if (Auth::user()->is_revisor)
             <li class="nav-item">
@@ -42,22 +56,12 @@
           </li>
           @endif
          
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Categorie
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="categoriesDropdown">
-              @foreach ($categories as $category)                  
-              <li><a class="dropdown-item" href="{{route('categoryShow', compact('category'))}}"> {{($category->name)}} </a></li>
-              <li><hr class="dropdown-divider"></li>
-              @endforeach
-            </ul>
-          </li>
+        
         </ul>
-        {{-- <form class="d-flex" role="search">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success" type="submit">Search</button>
-        </form> --}}
+        <form class="d-flex" role="search" action="{{route('announcements.search')}}" method="get">
+          <input name="searched" class="form-control me-2" type="search" placeholder="Cerca qui" aria-label="Search">
+          <button class="btn btn-dark" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </form>
       </div>
     </div>
   </nav>

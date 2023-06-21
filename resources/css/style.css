@@ -2,3 +2,77 @@
     background-color: rgb(50, 49, 49);
     color: white;
 } */
+
+:root{
+
+    --nomeVariabile:valore;
+
+    --fontParagrafi:'Mukta Malar', sans-serif;
+
+    --fontTitoli:'Red Hat Text', sans-serif;
+}
+
+/*
+font-family: 'Mukta Malar', sans-serif;
+font-family: 'Red Hat Text', sans-serif;
+*/
+
+
+.form-signin {
+    max-width: 600px;
+    padding: 1rem;
+}
+
+.masthead {
+    height: 80vh;
+    min-height: 500px;
+    background: url('/public/images/header.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .box-masthead{
+
+    background: linear-gradient(rgba(0, 0, 0, 0.50), rgba(0, 0, 0, 0.50));
+    padding: calc(3vh + 3vw);
+    color: white;
+  }
+
+  .title-masthead{
+    
+    font-size: 7rem;
+  }
+
+  .f-title{
+
+    font-family: var(--fontTitoli);
+  }
+
+  .f-text{
+
+    font-family: var(--fontParagrafi);
+    letter-spacing: 1px;
+  }
+
+  .card-text{
+
+    height: 75px;
+  }
+
+  .active>.page-link{
+
+    background-color: black;
+  }
+
+  a.page-link{
+
+    color: black;
+  }
+
+  @media screen and (max-width:520px){
+    .title-masthead{
+    
+        font-size: 4rem;
+      }
+  }

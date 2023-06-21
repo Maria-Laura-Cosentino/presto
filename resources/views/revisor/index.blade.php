@@ -1,8 +1,8 @@
 <x-layout>
-    <div class="container">
-        <div class="row">
-            <div class="col-12 col-md-6">
-                <h1>
+    <div class="container-fluid mb-4">
+        <div class="row bg-body-tertiary py-5">
+            <div class="col-12">
+                <h1 class="text-center fw-semibold display-2">
                     {{$announcement_to_check ? 'Ecco l\'annuncio da revisionare' : 'Non ci sono annunci da revisionare'}}
                 </h1>
             </div>
@@ -11,17 +11,17 @@
     @if($announcement_to_check)
         <div class="container pt-5">
             <div class="row justify-content-center">
-                <div class="col-12 col-md-8">
+                <div class="col-12 col-md-5 mb-5">
                     <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
                         <div class="carousel-inner">
                           <div class="carousel-item active">
-                            <img src="https://picsum.photos/700/400" class="d-block" alt="...">
+                            <img src="https://picsum.photos/1200/1200" class="w-100 rounded-2"  alt="...">
                           </div>
                           <div class="carousel-item">
-                            <img src="https://picsum.photos/700/401" class="d-block" alt="...">
+                            <img src="https://picsum.photos/1200/1201" class="w-100 rounded-2" alt="...">
                           </div>
                           <div class="carousel-item">
-                            <img src="https://picsum.photos/700/403" class="d-block" alt="...">
+                            <img src="https://picsum.photos/1200/1203" class="w-100 rounded-2" alt="...">
                           </div>
                         </div>
                         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
@@ -34,29 +34,34 @@
                         </button>
                     </div>
                 </div>
-            </div>
-            <div class="row justify-content-center py-5">
-                <div class="col-12 col-md-4">
-                    <h5 class="">{{$announcement_to_check->title}}</h5>
-                    <p class="">{{$announcement_to_check->body}}</p>
-                    <p class="">{{$announcement_to_check->price}} €</p>        
-                    <p class="">Creato il: {{$announcement_to_check->created_at->format('d/m/Y')}}</p>
-                    <p>Categoria: {{$announcement_to_check->category->name}}</p>
+                <div class="col-12 col-md-7">
+                    <div class="px-3">
+                        <p class="fs-2 py-2 text-uppercase border-bottom border-2">Categoria: {{$announcement_to_check->category->name}}</p>
+                        <h2 class="display-3 fw-bold">{{$announcement_to_check->title}}</h2>
+                        <p class="fs-4 py-2">{{$announcement_to_check->price}} €</p>        
+                        <p class="fs-3 py-2 fw-semibold">Creato il: {{$announcement_to_check->created_at->format('d/m/Y')}}</p>
+                        <p class="fs-5 p-3 bg-light">{{$announcement_to_check->body}}</p>
+                    </div>
+                    
                 </div>
             </div>
-            <div class="row">
-                <div class="col-12 col-md-6">
+           
+               
+          
+            <div class="row my-5">
+                <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                {{-- <div class="col-12 col-md-6"> --}}
                     <form action="{{route('revisor.accept_announcement', ['announcement' => $announcement_to_check])}}" method="post">
                         @csrf
                         @method('patch')
-                        <button class="submit btn btn-success shadow">Accetta</button>
+                        <button class="submit btn btn-success shadow fs-3">Accetta</button>
                     </form>
-                </div>
-                <div class="col-12 col-md-6 text-end">
+                {{-- </div> --}}
+                {{-- <div class="col-12 col-md-6 text-end"> --}}
                     <form action="{{route('revisor.reject_announcement', ['announcement' => $announcement_to_check])}}" method="post">
                         @csrf
                         @method('patch')
-                        <button class="submit btn btn-danger shadow">Rifiuta</button>
+                        <button class="submit btn btn-danger shadow fs-3">Rifiuta</button>
                     </form>
                 </div>
             </div>

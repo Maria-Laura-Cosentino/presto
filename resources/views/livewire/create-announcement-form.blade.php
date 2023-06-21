@@ -6,27 +6,23 @@
    @endif
    <form wire:submit.prevent="store">
 
-    <div class="input-group mb-3">
-        <input type="text" name="title" class="form-control" placeholder="Titolo" aria-label="Titolo" aria-describedby="basic-addon1" wire:model="title">
+        <div class="input-group">
+            <input type="text" name="title" class="form-control" placeholder="Titolo" aria-label="Titolo" aria-describedby="basic-addon1" wire:model="title">
+        </div>
+        <div class="text-danger mb-4">@error('title') <span class="error">{{ $message }}</span> @enderror</div>
 
-        @error('title') <span class="error">{{ $message }}</span> @enderror
-    </div>
-
-   <div class=" my-3">
+        <div class="">
             {{-- <h4>Category</h4> --}}
-
-            <div>
-                <label class="form-label">Categoria</label>
-                {{-- @dd($categories) --}}
-                <select class="form-select" aria-label="Default select example" name="category_id" wire:model="category_id">
-                    <option selected >Nessuna categoria selezionata</option>
-                    @foreach($categories as $category)
-                        <option value="{{ $category->id }}" >{{ $category->name }}</option>
-                    @endforeach
-                </select>
-
-                @error('category_id') <span class="error">{{ $message }}</span> @enderror
-            </div>
+            <label class="form-label">Categoria</label>
+            {{-- @dd($categories) --}}
+            <select class="form-select" aria-label="Default select example" name="category_id" wire:model="category_id">
+                <option selected >Nessuna categoria selezionata</option>
+                @foreach($categories as $category)
+                    <option value="{{ $category->id }}" >{{ $category->name }}</option>
+                @endforeach
+            </select>
+        </div>
+        <div class="text-danger mb-4">@error('category_id') <span class="error">{{ $message }}</span> @enderror</div>
 
             {{-- <div class="input-group mb-3">
                 <input type="file" name="img" class="form-control" placeholder="Immagine" aria-label="Img" aria-describedby="basic-addon1" wire:model="img">        
@@ -57,21 +53,19 @@
                     </div>
                 @endforeach
             </div> --}}
-    </div>
+    
 
-    <div class="input-group mb-3">
-        <input type="number" name="price" step="0.01" class="form-control" placeholder="Prezzo" aria-label="Prezzo" aria-describedby="basic-addon1"  wire:model="price">
+        <div class="input-group">
+            <input type="number" name="price" step="0.01" class="form-control" placeholder="Prezzo" aria-label="Prezzo" aria-describedby="basic-addon1"  wire:model="price">
+        </div>
+        <div class="text-danger mb-4">@error('price') <span class="error">{{ $message }}</span> @enderror</div>
 
-        @error('price') <span class="error">{{ $message }}</span> @enderror
-    </div>
+        <div class="input-group">
+            <textarea name="body" placeholder="Descrizione" aria-label="Descrizione" class="form-control" aria-label="With textarea"  wire:model="body"></textarea> 
+        </div>
+        <div class="text-danger mb-4">@error('body') <span class="error">{{ $message }}</span> @enderror</div>
 
-    <div class="input-group mb-3">
-        <textarea name="body" placeholder="Descrizione" aria-label="Descrizione" class="form-control" aria-label="With textarea"  wire:model="body"></textarea>
-
-        @error('body') <span class="error">{{ $message }}</span> @enderror
-    </div>
-
-    <button type="submit" class="btn btn-primary">Inserisci</button>
+        <button type="submit" class="btn btn-dark">Crea annuncio</button>
 
    </form>
 </div>

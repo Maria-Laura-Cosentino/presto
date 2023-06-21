@@ -24,4 +24,17 @@ class PublicController extends Controller
 
         return view('announcement.detailShow', compact('announcement'));
     }
+
+    public function indexShow(){
+        // $announcements = Announcement::all();
+        $announcements = Announcement::where('is_accepted', true)->orderBy('created_at','desc')->paginate(6);        
+        return view('announcement.index',compact('announcements'));  
+    
+    }
+
+    public function searchAnnouncements(Request $request){
+
+        $announcements = Announcement::search($request->searched)->where('is_accepted', true)->paginate(6);
+        return view('announcement.index',compact('announcements')); 
+    }
 }
