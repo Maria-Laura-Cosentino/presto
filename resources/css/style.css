@@ -5,11 +5,13 @@
 
 :root{
 
-    --nomeVariabile:valore;
+    /* --nomeVariabile:valore; */
 
     --fontParagrafi:'Mukta Malar', sans-serif;
 
     --fontTitoli:'Red Hat Text', sans-serif;
+
+    --white: rgb(255, 255, 255);
 }
 
 /*

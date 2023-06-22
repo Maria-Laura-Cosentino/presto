@@ -17,9 +17,15 @@
               Categorie
             </a>
             <ul class="dropdown-menu" aria-labelledby="categoriesDropdown">
-              @foreach ($categories as $category)                  
+              @foreach ($categories as $category) 
+              {{-- Se non ultimo metti divisore --}}
+              @if (!$loop->last)
               <li><a class="dropdown-item" href="{{route('categoryShow', compact('category'))}}"> {{($category->name)}} </a></li>
               <li><hr class="dropdown-divider"></li>
+              @else
+              <li><a class="dropdown-item" href="{{route('categoryShow', compact('category'))}}"> {{($category->name)}} </a></li>
+              @endif
+
               @endforeach
             </ul>
           </li>
@@ -27,8 +33,9 @@
           <li class="nav-item">
             <a class="nav-link" href="{{route('login')}}">Login</a>
           </li>
+          {{-- Esempio traduziine multiligua Campo di testo // cartella per fare traduzioni lang/ui   // da fare  mano per ogni lingua --}}
           <li class="nav-item">
-            <a class="nav-link" href="{{route('register')}}">Registrati</a>
+            <a class="nav-link" href="{{route('register')}}">{{__('ui.register')}}</a>
           </li>
           @else
           <li class="nav-item">
@@ -55,6 +62,12 @@
             </form>
           </li>
           @endif
+
+          <li class="nav-item">
+            <x-_locale lang="it"/>
+            <x-_locale lang="en"/>
+            <x-_locale lang="es"/>
+          </li>
          
         
         </ul>

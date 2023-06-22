@@ -49,3 +49,6 @@ Route::patch('/reject/announcement/{announcement}', [RevisorController::class, '
 Route::post('/richiesta/revisore', [RevisorController::class, 'becomeRevisor'])->middleware('auth')->name('become.revisor');
 
 Route::get('/rendi/revisore/{user}', [RevisorController::class, 'makeRevisor'])->name('make.revisor');
+
+// Lingua
+Route::post('/lingua/{lang}', [PublicController::class, 'setLanguage'])->name('set_language_locale');
