@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg py-3">
+<nav class="navbar navbar-expand-lg border-bottom py-3">
     <div class="container-fluid">
       <a class="navbar-brand" href="{{route('home')}}"><i class="fa-brands fa-artstation fs-3 "></i><span class="fw-semibold ms-2">Presto.it</span></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
