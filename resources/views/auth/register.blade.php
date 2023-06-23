@@ -40,29 +40,29 @@
                     <p><i class="fa-brands fa-artstation fs-2 me-1"></i><span class="fs-2 fw-semibold"> Presto.it</span></p>
                   </div>
                   <div class="my-5">
-                    <h1 class="text-center mb-2">Crea il tuo account</h1>
-                    <p class="text-center fs-5">Inserisci i tuoi dati</p>
+                    <h1 class="text-center mb-2">{{__('ui.create_your_account')}}</h1>
+                    <p class="text-center fs-5">{{__('ui.enter_your_details')}}</p>
                   </div>
                   <div class="form-floating mb-4">
-                    <input type="text" name="name" class="form-control" id="floatingName" placeholder="Nome">
-                    <label for="floatingName">Nome</label>
+                    <input type="text" name="name" class="form-control" id="floatingName" placeholder="{{__('ui.name')}}">
+                    <label for="floatingName">{{__('ui.name')}}</label>
                   </div>
                   <div class="form-floating mb-4">
                     <input type="email" name="email" class="form-control" id="floatingEmail" placeholder="name@example.com">
-                    <label for="floatingEmail">Email</label>
+                    <label for="floatingEmail">{{__('ui.email')}}</label>
                   </div>
                   <div class="form-floating mb-4">
-                    <input type="password" name="password" class="form-control" id="floatingPassword" placeholder="Password">
-                    <label for="floatingPassword">Password</label>
+                    <input type="password" name="password" class="form-control" id="floatingPassword" placeholder="{{__('ui.password')}}">
+                    <label for="floatingPassword">{{__('ui.password')}}</label>
                   </div>
                   <div class="form-floating mb-4">
-                    <input type="password" name="password_confirmation" class="form-control" id="floatingConfermaPassword" placeholder="Conferma password">
-                    <label for="floatingConfermaPassword">Conferma password</label>
+                    <input type="password" name="password_confirmation" class="form-control" id="floatingConfermaPassword" placeholder="{{__('ui.confirm_password')}}">
+                    <label for="floatingConfermaPassword">{{__('ui.confirm_password')}}</label>
                   </div>
-                  <button class="w-100 btn btn-lg btn-dark mt-3 mb-2" type="submit">Registrati</button>
+                  <button class="w-100 btn btn-lg btn-dark mt-3 mb-2" type="submit">{{__('ui.register')}}</button>
                   {{-- <hr class="my-4"> --}}
-                  <small class="text-body-secondary">Facendo clic su Registrati, accetti i termini di utilizzo.</small>
-                  <p class="mt-5 fs-5">Hai già un account?<a href="{{route('login')}}" class="fw-semibold text-decoration-none text-reset"> Accedi ora</a> </p>
+                  <small class="text-body-secondary">{{__('ui.by_clicking_on_register_accept_the_terms')}}.</small>
+                  <p class="mt-5 fs-5">{{__('ui.already_have_an_account')}}<a href="{{route('login')}}" class="fw-semibold text-decoration-none text-reset"> {{__('ui.sign_in_now')}}</a> </p>
                 </form>
               </main>
             </div>

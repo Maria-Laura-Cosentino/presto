@@ -2,7 +2,7 @@
     <div class="container-fluid mb-5">
         <div class="row bg-body-tertiary py-5">
           <div class="col-12">
-              <h1 class="text-center fw-semibold display-2">Crea il tuo annuncio</h1>
+              <h1 class="text-center fw-semibold display-2">{{__('ui.create_your_ad')}}</h1>
           </div>
         </div>
       </div>

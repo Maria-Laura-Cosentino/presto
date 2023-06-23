@@ -23,26 +23,26 @@
                 <p><i class="fa-brands fa-artstation fs-2 me-1"></i><span class="fs-2 fw-semibold"> Presto.it</span></p>
               </div>
               <div class="my-5">
-                <h1 class="text-center mb-2">Accedi al tuo account</h1>
-                <p class="text-center fs-5">Inserisci i tuoi dati</p>
+                <h1 class="text-center mb-2">{{__('ui.sign_in')}}</h1>
+                <p class="text-center fs-5">{{__('ui.enter_your_details')}}</p>
               </div>
               <div class="form-floating mb-4">
                 <input type="email" name="email" class="form-control" id="floatingInput" placeholder="name@example.com">
-                <label for="floatingInput">Email</label>
+                <label for="floatingInput">{{__('ui.email')}}</label>
               </div>
               <div class="form-floating mb-4">
-                <input type="password" name="password" class="form-control" id="floatingPassword" placeholder="Password">
-                <label for="floatingPassword">Password</label>
+                <input type="password" name="password" class="form-control" id="floatingPassword" placeholder="{{__('ui.password')}}">
+                <label for="floatingPassword">{{__('ui.password')}}</label>
               </div>
               <div class="checkbox mb-3">
                 <label>
-                  <input type="checkbox" value="remember-me"> Ricordami
+                  <input type="checkbox" value="remember-me"> {{__('ui.remember')}}
                 </label>
               </div>
               <button class="w-100 btn btn-lg btn-dark mt-3 mb-2" type="submit">Login</button>
               {{-- <hr class="my-4"> --}}
-              <small class="text-body-secondary">Facendo clic su Login, accetti i termini di utilizzo.</small>
-              <p class="mt-5 fs-5">Prima volta su Presto.it?<a href="{{route('register')}}" class="fw-semibold text-decoration-none text-reset"> Registrati</a> </p>
+              <small class="text-body-secondary">{{__('ui.by_clicking_on_login_accept_the_terms')}}.</small>
+              <p class="mt-5 fs-5">{{__('ui.first_time_on')}} Presto.it?<a href="{{route('register')}}" class="fw-semibold text-decoration-none text-reset"> {{__('ui.register')}}</a> </p>
             </form>
           </main>
       </div>

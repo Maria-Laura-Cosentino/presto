@@ -7,16 +7,16 @@
    <form wire:submit.prevent="store">
 
         <div class="input-group">
-            <input type="text" name="title" class="form-control" placeholder="Titolo" aria-label="Titolo" aria-describedby="basic-addon1" wire:model="title">
+            <input type="text" name="title" class="form-control" placeholder="{{__('ui.title')}}" aria-label="Titolo" aria-describedby="basic-addon1" wire:model="title">
         </div>
         <div class="text-danger mb-4">@error('title') <span class="error">{{ $message }}</span> @enderror</div>
 
         <div class="">
             {{-- <h4>Category</h4> --}}
-            <label class="form-label">Categoria</label>
+            <label class="form-label">{{__('ui.category')}}</label>
             {{-- @dd($categories) --}}
             <select class="form-select" aria-label="Default select example" name="category_id" wire:model="category_id">
-                <option selected >Nessuna categoria selezionata</option>
+                <option selected >{{__('ui.no_category_selected')}}</option>
                 @foreach($categories as $category)
                     <option value="{{ $category->id }}" >{{ $category->name }}</option>
                 @endforeach
@@ -56,16 +56,16 @@
     
 
         <div class="input-group">
-            <input type="number" name="price" step="0.01" class="form-control" placeholder="Prezzo" aria-label="Prezzo" aria-describedby="basic-addon1"  wire:model="price">
+            <input type="number" name="price" step="0.01" class="form-control" placeholder="{{__('ui.price')}}" aria-label="Prezzo" aria-describedby="basic-addon1"  wire:model="price">
         </div>
         <div class="text-danger mb-4">@error('price') <span class="error">{{ $message }}</span> @enderror</div>
 
         <div class="input-group">
-            <textarea name="body" placeholder="Descrizione" aria-label="Descrizione" class="form-control" aria-label="With textarea"  wire:model="body"></textarea> 
+            <textarea name="body" placeholder="{{__('ui.description')}}" aria-label="Descrizione" class="form-control" aria-label="With textarea"  wire:model="body"></textarea> 
         </div>
         <div class="text-danger mb-4">@error('body') <span class="error">{{ $message }}</span> @enderror</div>
 
-        <button type="submit" class="btn btn-dark">Crea annuncio</button>
+        <button type="submit" class="btn btn-dark">{{__('ui.create_ad')}}</button>
 
    </form>
 </div>

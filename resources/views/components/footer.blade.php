@@ -12,14 +12,14 @@
        
       <div class="col mb-3 px-3"> 
       
-        <h4 class="mb-4">Lavora con noi</h4>
+        <h4 class="mb-4">{{__('ui.work_with_us')}}</h4>
         <ul class="nav flex-column">
           {{-- <li class="nav-item mb-2">Presto.it</li> --}}
-          <li class="nav-item mb-2">Vuoi lavorare con noi?</li>
-          <li class="nav-item mb-2 mb-5"><a class="btn btn-outline-light" href="{{route('register')}}">Registrati e clicca qui</a></li>
+          <li class="nav-item mb-2">{{__('ui.want_to_join_us')}}</li>
+          <li class="nav-item mb-2 mb-5"><a class="btn btn-outline-light" href="{{route('register')}}">{{__('ui.register_and_click_here')}}</a></li>
           @if (Auth::user() && Auth::user()->is_revisor == false)
-          <li class="nav-item mb-2">Hai già un account?</li>
-          <li class="nav-item mb-2"><a href="{{route('be.revisor')}}" class="btn btn-outline-light">Diventa revisore</a></li>
+          <li class="nav-item mb-2">{{__('ui.already_have_an_account')}}</li>
+          <li class="nav-item mb-2"><a href="{{route('be.revisor')}}" class="btn btn-outline-light">{{__('ui.become_an_editor')}}</a></li>
           @endif
         </ul> 
       </div>

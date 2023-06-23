@@ -10,11 +10,11 @@
             <a class="nav-link" aria-current="page" href="{{route('home')}}">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="{{route('indexShow')}}">Annunci</a>
+            <a class="nav-link" href="{{route('indexShow')}}">{{__('ui.announcement')}}</a>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Categorie
+              {{__('ui.categories')}}
             </a>
             <ul class="dropdown-menu" aria-labelledby="categoriesDropdown">
               @foreach ($categories as $category) 
@@ -39,7 +39,7 @@
           </li>
           @else
           <li class="nav-item">
-            <a class="nav-link" href="{{ route('announcement.create')}}">Nuovo annuncio</a>
+            <a class="nav-link" href="{{ route('announcement.create')}}">{{__('ui.new_announcement')}}</a>
           </li>
           @if (Auth::user()->is_revisor)
             <li class="nav-item">
@@ -72,7 +72,7 @@
         
         </ul>
         <form class="d-flex" role="search" action="{{route('announcements.search')}}" method="get">
-          <input name="searched" class="form-control me-2" type="search" placeholder="Cerca qui" aria-label="Search">
+          <input name="searched" class="form-control me-2" type="search" placeholder="{{__('ui.search')}}" aria-label="Search">
           <button class="btn btn-dark" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
         </form>
       </div>
