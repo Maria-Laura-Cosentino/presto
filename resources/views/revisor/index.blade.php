@@ -13,17 +13,31 @@
             <div class="row justify-content-center">
                 <div class="col-12 col-md-5 mb-5">
                     <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
-                        <div class="carousel-inner">
-                          <div class="carousel-item active">
-                            <img src="https://picsum.photos/1200/1200" class="w-100 rounded-2"  alt="...">
-                          </div>
-                          <div class="carousel-item">
-                            <img src="https://picsum.photos/1200/1201" class="w-100 rounded-2" alt="...">
-                          </div>
-                          <div class="carousel-item">
-                            <img src="https://picsum.photos/1200/1203" class="w-100 rounded-2" alt="...">
-                          </div>
-                        </div>
+                        {{-- @if(count($announcement_to_check->images))
+                        @else
+                        @endif --}}
+                        @if($announcement_to_check->images)
+                            <div class="carousel-inner">
+                                @foreach ($announcement_to_check->images as $image )
+                                <div class="carousel-item @if($loop->first)active @endif">
+                                    <img src="{{Storage::url($image->path)}}" class="w-100 rounded-2"  alt="...">
+                                  </div>
+                                @endforeach
+                            </div>
+                        @endif
+                        @if ($announcement_to_check->images()->get()->isEmpty())
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="https://picsum.photos/1200/1200" class="w-100 rounded-2"  alt="...">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="https://picsum.photos/1200/1201" class="w-100 rounded-2" alt="...">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="https://picsum.photos/1200/1203" class="w-100 rounded-2" alt="...">
+                                </div>
+                            </div>
+                        @endif
                         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
                           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                           <span class="visually-hidden">Previous</span>

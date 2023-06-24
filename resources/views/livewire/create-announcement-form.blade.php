@@ -65,6 +65,26 @@
         </div>
         <div class="text-danger mb-4">@error('body') <span class="error">{{ $message }}</span> @enderror</div>
 
+        <div class="input-group">
+            <input type="file" name="images" multiple placeholder="Img" class="form-control shadow @error('temporary_images.*') is-invalid @enderror" aria-label="Immagine" aria-describedby="basic-addon1"  wire:model="temporary_images">
+        </div>
+        <div class="text-danger mb-4">@error('temporary_images.*') <span class="error">{{ $message }}</span> @enderror</div>
+        @if (!empty ($images))
+        <div class="row">
+            <div class="col-12">
+                <p>Anteprima foto</p>
+                <div class="row border border-4 border-info rounded shadow py-4 mb-4">
+                    @foreach ($images as $key => $image)
+                    <div class="col-4 my-3">
+                        <div class="w-100 mx-auto shadow rounded" style="background-image: url({{$image->temporaryUrl()}}); background-size:cover; background-position:center; height:200px"></div>
+                        <button class="btn btn-danger shadow d-block text-center mt-2 mx-auto" type="button" wire:click="removeImage({{$key}})">Cancella</button>
+                    </div> 
+                    @endforeach
+                </div>
+            </div>
+        </div>   
+        @endif
+
         <button type="submit" class="btn btn-dark">{{__('ui.create_ad')}}</button>
 
    </form>

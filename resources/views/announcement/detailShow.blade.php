@@ -11,17 +11,29 @@
     <div class="row gx-4 gx-lg-5 align-items-center">
         <div class="col-md-6">
             <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
-                <div class="carousel-inner">
-                  <div class="carousel-item active">
-                    <img src="https://picsum.photos/600/701" class="d-block w-100" alt="...">
+    
+              @if($announcement->images)
+              <div class="carousel-inner">
+                  @foreach ($announcement->images as $image )
+                  <div class="carousel-item @if($loop->first)active @endif">
+                      <img src="{{Storage::url($image->path)}}" class="w-100 rounded-2"  alt="...">
                   </div>
-                  <div class="carousel-item">
-                    <img src="https://picsum.photos/600/702" class="d-block w-100" alt="...">
+                  @endforeach
                   </div>
-                  <div class="carousel-item">
-                    <img src="https://picsum.photos/600/703" class="d-block w-100" alt="...">
+              @endif
+              @if ($announcement->images()->get()->isEmpty())
+                  <div class="carousel-inner">
+                      <div class="carousel-item active">
+                          <img src="https://picsum.photos/1200/1200" class="w-100 rounded-2"  alt="...">
+                      </div>
+                      <div class="carousel-item">
+                          <img src="https://picsum.photos/1200/1201" class="w-100 rounded-2" alt="...">
+                      </div>
+                      <div class="carousel-item">
+                          <img src="https://picsum.photos/1200/1203" class="w-100 rounded-2" alt="...">
+                      </div>
                   </div>
-                </div>
+              @endif
                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
                   <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                   <span class="visually-hidden">Previous</span>

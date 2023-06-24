@@ -15,7 +15,7 @@ return [
     'search' => 'Búsqueda',
     'title' => 'Título',
     'published_on' => 'Publicado el',
-    'register_and_click_here' => 'Regístrate y haga clic aquí',
+    'register_and_click_here' => 'Regístrate y dale clic aquí',
     'work_with_us' => 'Trabaja con nosotros',
     'want_to_join_us' => '¿Quieres trabajar con nosotros?',
     'already_have_an_account' => '¿Ya tienes una cuenta?',
