@@ -15,8 +15,10 @@
               @if($announcement->images)
               <div class="carousel-inner">
                   @foreach ($announcement->images as $image )
+                  {{-- @dd(get_class($image)) --}}
+                   {{-- @dd($announcement->images()->first()) --}}
                   <div class="carousel-item @if($loop->first)active @endif">
-                      <img src="{{Storage::url($image->path)}}" class="w-100 rounded-2"  alt="...">
+                      <img src="{{$image->getUrl(800, 800)}}" class="w-100 rounded-2"  alt="...">
                   </div>
                   @endforeach
                   </div>

@@ -24,10 +24,7 @@ font-family: 'Red Hat Text', sans-serif;
   height:650px;
 }
 
-.btn.btn-outline-success:hover{
 
-  color: #fff;
-}
 
 .form-signin {
     max-width: 600px;

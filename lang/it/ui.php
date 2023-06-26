@@ -34,4 +34,6 @@ return [
     'first_time_on' => 'Prima volta su',
     'by_clicking_on_login_accept_the_terms' => 'Facendo clic su login, accetti i termini di utilizzo',
     'by_clicking_on_register_accept_the_terms' => 'Facendo clic su registrati, accetti i termini di utilizzo',
+    'success' => 'Annuncio creato con successo',
+    'required' => 'Il campo :attribute è obbligatorio'
 ];

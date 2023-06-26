@@ -1,6 +1,6 @@
 <div class="col-12 col-md-4 my-4 d-flex justify-content-center">
     <div class="card shadow">
-        <img src="{{!$announcement->images()->get()->isEmpty() ? Storage::url($announcement->images()->first()->path) : "https://picsum.photos/1200/1200"}}" class="card-img-top" alt="...">
+        <img src="{{!$announcement->images()->get()->isEmpty() ? $announcement->images()->first()->getUrl(800, 800) : "https://picsum.photos/1200/1200"}}" class="card-img-top" alt="...">
         <div class="card-body px-4">
             <div class="badge bg-dark bg-gradient rounded-pill mb-3 p-2">{{__('ui.category')}}: {{$announcement->category->name}} </div>
             <h5 class="card-title f-title mb-3">{{$announcement->title}}</h5>
