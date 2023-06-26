@@ -5,7 +5,7 @@ return [
     'register'=> 'Registrati',
     'detail' => 'Dettaglio',
     'new_announcement' => 'Nuovo annuncio',
-    'announcement' => 'Annunci',
+    'announcements' => 'Annunci',
     'announcement' => 'Annuncio',
     'categories' => 'Categorie',
     'category' => 'Categoria',

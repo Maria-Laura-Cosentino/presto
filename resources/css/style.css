@@ -19,6 +19,15 @@ font-family: 'Mukta Malar', sans-serif;
 font-family: 'Red Hat Text', sans-serif;
 */
 
+.empy-space{
+
+  height:650px;
+}
+
+.btn.btn-outline-success:hover{
+
+  color: #fff;
+}
 
 .form-signin {
     max-width: 600px;

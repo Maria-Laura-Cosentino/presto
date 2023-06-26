@@ -8,6 +8,22 @@
             </div>
         </div>
     </div>
+    <div class="container mt-5">
+        <div class="row my-3">
+            @if (session()->has('reject.message'))
+            <div class="alert alert-danger">
+             {{session('reject.message')}}
+            </div>
+            @endif
+
+            @if (session()->has('accept.message'))
+            <div class="alert alert-success">
+             {{session('accept.message')}}
+            </div>
+            @endif
+        </div>
+    </div>
+    <div class={{$announcement_to_check ? "d-none" :"empy-space"}} ></div>
     @if($announcement_to_check)
         <div class="container pt-5">
             <div class="row justify-content-center">

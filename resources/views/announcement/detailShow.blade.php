@@ -64,15 +64,23 @@
             </div>
         </div>
       </div>
-        {{-- <div class="col-md-6">
-            <h5 class="">{{$announcement->title}}</h5>
-            <p class="">{{$announcement->body}}</p>
-            <p class="">{{$announcement->price}} €</p>        
-            <p class="">Creato da: {{$announcement->user->name}} il: {{$announcement->created_at->format('d/m/Y')}}</p>
-            <p>Categoria: {{$announcement->category->name}}</p>
-            {{-- {{$category = $categories->find($announcement->category_id->id)}} --}}
-            {{-- <a href="{{ route('categoryShow', compact('category'))}}">{{$announcement->category->name}}</a>
-        </div> --}}
+    </div>
+  </div>
+  <div class="container px-4 px-lg-5 my-5">
+    <div class="row">
+      <div class="col-md-12">
+        <h3 class="mb-3">Annunci correlati</h3>
+        <div class="border-bottom mb-3"></div>
+      </div>
+      <div class="row">
+       
+          @foreach ($related as $announcement)
+          <x-card :announcement="$announcement"></x-card>
+          @endforeach
+   
+       
+    
+      </div>
     </div>
   </div>
 </x-layout>

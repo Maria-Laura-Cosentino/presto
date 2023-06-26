@@ -22,7 +22,9 @@ class PublicController extends Controller
 
     public function detailShow(Announcement $announcement){
 
-        return view('announcement.detailShow', compact('announcement'));
+        $related = Announcement::where('category_id', '=', $announcement->category->id)->where('id', '!=', $announcement->id)->orderBy('created_at','desc')->take(3)->get();
+
+        return view('announcement.detailShow', compact('announcement', 'related'));
     }
 
     public function indexShow(){

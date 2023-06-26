@@ -24,6 +24,7 @@
                             <i class="fa-solid fa-file-circle-plus text-dark fa-lg m-3"></i>
                         </a>
                     </h4>
+                    <div class="empy-space"></div>
                 </div>
             @endforelse
         </div>       
