@@ -72,7 +72,7 @@
                 <div class="col-12 col-md-7">
                     <div class="px-3">
                         <p class="fs-2 py-2 text-uppercase border-bottom border-2 mt-2">Categoria: {{$announcement_to_check->category->name}}</p>
-                        <h2 class="display-4 fw-bold">{{$announcement_to_check->title}}</h2>
+                        <h2 class="display-5 fw-bold">{{$announcement_to_check->title}}</h2>
                         <p class="fs-4 py-2">{{$announcement_to_check->price}} €</p>        
                         <p class="fs-3 py-2 fw-semibold">Creato il: {{$announcement_to_check->created_at->format('d/m/Y')}}</p>
                         <p class="fs-5 p-3 bg-light">{{$announcement_to_check->body}}</p>
