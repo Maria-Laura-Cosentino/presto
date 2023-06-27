@@ -72,12 +72,12 @@
         @if (!empty ($images))
         <div class="row">
             <div class="col-12">
-                <p>Anteprima foto</p>
+                <p>{{__('ui.photo_preview')}}</p>
                 <div class="row border border-4 border-info rounded shadow py-4 mb-4">
                     @foreach ($images as $key => $image)
                     <div class="col-4 my-3">
                         <div class="w-100 mx-auto shadow rounded" style="background-image: url({{$image->temporaryUrl()}}); background-size:cover; background-position:center; height:200px"></div>
-                        <button class="btn btn-danger shadow d-block text-center mt-2 mx-auto" type="button" wire:click="removeImage({{$key}})">Cancella</button>
+                        <button class="btn btn-danger shadow d-block text-center mt-2 mx-auto" type="button" wire:click="removeImage({{$key}})">{{__('ui.delete')}}</button>
                     </div> 
                     @endforeach
                 </div>

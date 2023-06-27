@@ -90,7 +90,7 @@ return [
     'max' => [
         'array' => 'The :attribute field must not have more than :max items.',
         'file' => 'The :attribute field must not be greater than :max kilobytes.',
-        'numeric' => 'The :attribute field must not be greater than :max.',
+        'numeric' => 'Il :attribute dev\'essere di max 5 cifre',
         'string' => 'The :attribute field must not be greater than :max characters.',
     ],
     'max_digits' => 'The :attribute field must not have more than :max digits.',
@@ -100,7 +100,7 @@ return [
         'array' => 'The :attribute field must have at least :min items.',
         'file' => 'The :attribute field must be at least :min kilobytes.',
         'numeric' => 'The :attribute field must be at least :min.',
-        'string' => 'The :attribute field must be at least :min characters.',
+        'string' => 'Il campo :attribute dev\'essere di almeno :min caratteri',
     ],
     'min_digits' => 'The :attribute field must have at least :min digits.',
     'missing' => 'The :attribute field must be missing.',
@@ -150,6 +150,7 @@ return [
     'url' => 'The :attribute field must be a valid URL.',
     'ulid' => 'The :attribute field must be a valid ULID.',
     'uuid' => 'The :attribute field must be a valid UUID.',
+    
 
     /*
     |--------------------------------------------------------------------------
@@ -179,6 +180,11 @@ return [
     |
     */
 
-    'attributes' => [],
+    'attributes' => [
+        'title'=> 'titolo',
+        'price' => 'prezzo',
+        'body' => 'descrizione',
+        'category_id' => 'categoria',
+    ],
 
 ];
