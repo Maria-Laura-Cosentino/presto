@@ -35,4 +35,5 @@ return [
     'first_time_on' => 'First time on',
     'by_clicking_on_login_accept_the_terms' => 'By clicking on login, you are agreeing to the Terms of Use',
     'by_clicking_on_register_accept_the_terms' => 'By clicking on register, you are agreeing to the Terms of Use',
+    'editor_area' => 'Editor area',
 ];
