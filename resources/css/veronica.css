@@ -1,4 +1,13 @@
 .btn.btn-outline-success:hover{
-
     color: #fff;
   }
+
+/* before link */
+.nav-cust::before {
+  color: #000000;
+}
+
+/* mouse over.nav-link*/
+.nav-cust:hover {
+  color: #ffffff;
+}

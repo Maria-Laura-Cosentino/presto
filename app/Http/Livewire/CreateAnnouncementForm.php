@@ -38,7 +38,7 @@ class CreateAnnouncementForm extends Component
 
 
     //  protected $messages = [
-    //     'required' => "__('ui.required')",
+    //     'required' => 'Il campo :attribute è obbligatorio.',
     //     'min' => 'Il campo :attribute dev\'essere di almeno :min caratteri',
     //     'price.min'=> 'Il prezzo dev\'essere di min 1 €',
     //     'price.max' => 'Il prezzo dev\'essere di max 5 cifre',
@@ -48,13 +48,13 @@ class CreateAnnouncementForm extends Component
 
     // ];
 
-    protected $validationAttributes = [
-        'title' => 'titolo',
-        'price' => 'prezzo',
-        'body' => 'descrizione',
-        'category_id' => 'categoria',
+    // protected $validationAttributes = [
+    //     'title' => 'titolo',
+    //     'price' => 'prezzo',
+    //     'body' => 'descrizione',
+    //     'category_id' => 'categoria',
 
-    ];
+    // ];
 
     public function updatedTemporaryImages(){
 

@@ -6,7 +6,7 @@ return [
     'register'=> 'Regístrate',
     'detail' => 'Detalle',
     'new_announcement' => 'Nuevo anuncio',
-    'announcement' => 'Anuncios',
+    'announcements' => 'Anuncios',
     'announcement' => 'Anuncio',
     'categories' => 'Categorías',
     'category' => 'Categoría',
@@ -29,10 +29,26 @@ return [
     'enter_your_details' => 'Introduzca sus datos',
     'email' => 'Correo electrònico',
     'password' => 'Contraseña',
+    'accept' => 'Acepta',
+    'reject' => 'Rechaza',
+    'languages' => 'Idiomas',
+    'revised_announcements' => 'Anuncios revisados',
+    'latest_announcements' => 'Últimos anuncios',
+    'find_out_more' => 'Descubre más',
+
+
+    // scegli file creazione annuncio
     'created_by' => 'Anuncio de',
+    'choose_file' => 'Seleccione archivo',
+    'no_file_selected' => 'Ningún archivo seleccionado',
+    'photo_preview' => 'Vista previa de fotos',
+    'delete' => 'Borra',
     'confirm_password' => 'Confirmar contraseña',
     'remember' => 'Recuérdame',
     'first_time_on' => 'Primera vez en',
     'by_clicking_on_login_accept_the_terms' => 'Haciendo clic en iniciar sesión, aceptas los términos de uso',
     'by_clicking_on_register_accept_the_terms' => 'Haciendo clic en regístrate, aceptas los términos de uso',
+    'related_items' => 'Anuncios relacionados',
+    'announcements_to_be_revised' => 'Anuncios a revisar',
+    
 ];

@@ -29,11 +29,26 @@ return [
     'enter_your_details' => 'Enter your details',
     'email' => 'Email',
     'password' => 'Password',
+    'accept' => 'Accept',
+    'reject' => 'Reject',
+    'languages' => 'Languages',
+    'revised_announcements' => 'Revised announcements',
+    'latest_announcements' => 'Latest announcements',
+    'find_out_more' => 'Find out more',
+
+
+    // scegli file creazione annuncio
     'created_by' => 'Created by',
+    'choose_file' => 'Choose file',
+    'no_file_selected' => 'No file selected',
+    'photo_preview' => 'Photo preview',
+    'delete' => 'Delete',
     'confirm_password' => 'Confirm password',
     'remember' => 'Remember me',
     'first_time_on' => 'First time on',
     'by_clicking_on_login_accept_the_terms' => 'By clicking on login, you are agreeing to the Terms of Use',
     'by_clicking_on_register_accept_the_terms' => 'By clicking on register, you are agreeing to the Terms of Use',
     'editor_area' => 'Editor area',
+    'related_items' => 'Related items',
+    'announcements_to_be_revised' => 'Announcements to be revised',
 ];
