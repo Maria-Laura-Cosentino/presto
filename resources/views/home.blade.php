@@ -98,7 +98,7 @@
                 <!-- Card -->
                 <div class="col-12 col-sm-6 col-md-5 col-xl-4 d-flex justify-content-center pt-4 pt-xl-5 px-5">
                     <div class="maxWCardHome p-4">
-                        <img class="rounded-circle w-100 shadowCard" src="{{!$announcement->images()->get()->isEmpty() ? $announcement->images()->first()->getUrl(800, 800) : "https://picsum.photos/800/800"}}" alt="{{$announcement->title}}">
+                        <img class="rounded-circle w-100 shadowCard" src="{{!$announcement->images()->get()->isEmpty() ? $announcement->images()->first()->getUrl(800, 800) : 'https://picsum.photos/800/800'}}" alt="{{$announcement->title}}">
                         <div class="pt-2 pt-lg-4 pb-2 w-100 d-lg-flex justify-content-between">
                            <h3 class="text-start fs-4">{{$announcement->title}}</h3> 
                            <h3 class=" fs-4">{{$announcement->price}} €</h3>
@@ -126,17 +126,43 @@
     
 
     <!-- sez3 / Benefict -->
-    <!-- <section class="container-fluid py-3">
-        <div class="row  justify-content-center">
+   <section class="container-fluid py-3">
+        <div class="row  justify-content-center pb-5 mb-1 mb-md-5">
             <h2 class="col-12 text-center h2Sez2 black85 f-title fs-2">Titolo Sez</h2>
         </div>
         <div class="row justify-content-center align-items-center bg">
-            <div class="col-11 col-sm-6 col-xl-4">
-                <div class="rounded-circle bg_yellow contImgSez3"><i class="fa-solid fa-truck-fast imgSez3"></i></div>
-                <h3>Spedizioni veloci</h3>
+            <div class="col-11 col-sm-6 col-xl-3 pb-5">
+                <div class="d-flex flex-column align-items-center">
+                    <div class="rounded-circle bg_yellow contImgSez3 d-flex justify-content-center align-items-center"><i class="fa-solid fa-truck-fast imgSez3"></i></div>
+                    <h3 class="pt-3 charSpace1 f-text fs-4">Spedizioni veloci</h3>
+                </div>  
             </div>
+
+            <div class="col-11 col-sm-6 col-xl-3 pb-5">
+                <div class="d-flex flex-column align-items-center">
+                    <div class="rounded-circle bg_yellow contImgSez3 d-flex justify-content-center align-items-center"><i class="fa-solid fa-user-shield imgSez3"></i></div>
+                    <h3 class="pt-3 charSpace1 f-text fs-4">Transazioni sicure</h3>
+                </div>  
+            </div>
+
+            <div class="col-11 col-sm-6 col-xl-3 pb-5">
+                <div class="d-flex flex-column align-items-center">
+                    <div class="rounded-circle bg_yellow contImgSez3 d-flex justify-content-center align-items-center"><i class="fa-solid fa-truck-fast imgSez3"></i></div>
+                    <h3 class="pt-3 charSpace1 f-text fs-4">Spedizioni veloci</h3>
+                </div>  
+            </div>
+
+            <div class="col-11 col-sm-6 col-xl-3 pb-5">
+                <div class="d-flex flex-column align-items-center">
+                    <div class="rounded-circle bg_yellow contImgSez3 d-flex justify-content-center align-items-center"><i class="fa-solid fa-truck-fast imgSez3"></i></div>
+                    <h3 class="pt-3 charSpace1 f-text fs-4">Spedizioni veloci</h3>
+                </div>  
+            </div>
+
+           
+            
         </div>
-    </section> -->
+    </section>
 
      <!-- sez5 / Categorie -->
      <section id="h1_header" class="container-fluid py-3"></section>
