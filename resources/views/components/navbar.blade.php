@@ -30,13 +30,13 @@
             </ul>
           </li>
           @if(Auth::user() == null)
-          <li class="nav-item">
+          {{-- <li class="nav-item">
             <a class="nav-link" href="{{route('login')}}">Login</a>
-          </li>
-          {{-- Esempio traduziine multiligua Campo di testo // cartella per fare traduzioni lang/ui   // da fare  mano per ogni lingua --}}
-          <li class="nav-item">
+          </li> --}}
+          {{-- Esempio traduzione multilingua Campo di testo // cartella per fare traduzioni lang/ui   // da fare  mano per ogni lingua --}}
+          {{-- <li class="nav-item">
             <a class="nav-link" href="{{route('register')}}">{{__('ui.register')}}</a>
-          </li>
+          </li> --}}
           @else
           <li class="nav-item">
             <a class="nav-link" href="{{ route('announcement.create')}}">{{__('ui.new_announcement')}}</a>
@@ -58,23 +58,18 @@
           <li class="nav-item">
             <form action="{{route('logout')}}" method="POST">
               @csrf
-            <button class="btn btn-danger text-white">Logout</button>
+              <button class="btn btn-danger text-white">Logout</button>
             </form>
           </li>
           @endif
-
-          <li class="nav-item">
-            <x-_locale lang="it"/>
-            <x-_locale lang="en"/>
-            <x-_locale lang="es"/>
-          </li>
-         
-        
+          
         </ul>
-        <form class="d-flex" role="search" action="{{route('announcements.search')}}" method="get">
+        <a href="{{route('login')}}"class="fa-regular fa-user mt-3 fa-lg mb-4 me-3" style="color: #000000;"></a>
+        {{-- search --}}
+        {{-- <form class="d-flex" role="search" action="{{route('announcements.search')}}" method="get">
           <input name="searched" class="form-control me-2" type="search" placeholder="{{__('ui.search')}}" aria-label="Search">
           <button class="btn btn-dark" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
-        </form>
+        </form> --}}
       </div>
     </div>
   </nav>
