@@ -45,6 +45,12 @@ Route::patch('/accept/announcement/{announcement}', [RevisorController::class, '
 // Rifiuta annuncio
 Route::patch('/reject/announcement/{announcement}', [RevisorController::class, 'rejectAnnouncement'])->middleware('isRevisor')->name('revisor.reject_announcement');
 
+//Storico annunci revisionati
+Route::get('/revisor/history', [RevisorController::class, 'announcementsHistory'])->middleware('isRevisor')->name('revisor.history');
+
+// Riprisitna stato annunci revisionati
+Route::patch('/update/announcement/{announcement}', [RevisorController::class, 'updateAnnouncement'])->middleware('isRevisor')->name('revisor.update_announcement');
+
 // Richiedi di diventare revisore
 Route::post('/richiesta/revisore', [RevisorController::class, 'becomeRevisor'])->middleware('auth')->name('become.revisor');
 
