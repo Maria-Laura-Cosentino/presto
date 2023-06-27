@@ -33,7 +33,7 @@
         <div class="container pt-5">
             <div class="row justify-content-center">
                 <div class="col-12 col-md-5 mb-5">
-                    <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+                    <div id="carouselExampleAutoplaying" class="carousel slide">
                         {{-- @if(count($announcement_to_check->images))
                         @else
                         @endif --}}
@@ -41,7 +41,33 @@
                             <div class="carousel-inner">
                                 @foreach ($announcement_to_check->images as $image )
                                 <div class="carousel-item @if($loop->first)active @endif">
-                                    <img src="{{$image->getUrl(800, 800)}}" class="w-100 rounded-2"  alt="...">
+                                    <div>
+                                        <img src="{{$image->getUrl(800, 800)}}" class="w-100 rounded-2"  alt="...">
+                                    </div>
+                                    <div class="col-12 col-md-6">
+                                        <h5> Tags </h5>
+                                        <div>
+                                            @if($image->labels)
+                                                @foreach ($image->labels as $label)
+                                                    @if (!$loop->last)
+                                                        <p class="d-inline"> {{$label}}, </p>
+                                                    @else
+                                                        <p class="d-inline"> {{$label}}. </p>
+                                                    @endif
+                                                @endforeach
+                                            @endif
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-md-3">
+                                        <div class="card-body">
+                                            <h5>Revisione immagini</h5>
+                                            <p> Adulti: <span class="{{$image->adult}}"> </span></p> 
+                                            <p> Satira: <span class="{{$image->spoof}}"> </span></p>
+                                            <p> Medicina: <span class="{{$image->medical}}"> </span></p>
+                                            <p> Violenza: <span class="{{$image->violence}}"> </span></p>
+                                            <p> Contenuto ammiccante: <span class="{{$image->racy}}"> </span></p>
+                                        </div>
+                                    </div>
                                   </div>
                                 @endforeach
                             </div>
