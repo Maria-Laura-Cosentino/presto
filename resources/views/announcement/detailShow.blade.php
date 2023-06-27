@@ -71,7 +71,7 @@
   <div class="container px-4 px-lg-5 my-5">
     <div class="row">
       <div class="col-md-12">
-        <h3 class="mb-3">Annunci correlati</h3>
+        <h3 class="mb-3">{{__('ui.related_items')}}</h3>
         <div class="border-bottom mb-3"></div>
       </div>
       <div class="row">

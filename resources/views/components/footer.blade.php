@@ -61,7 +61,7 @@
 
         {{-- lingue --}}
         <div class="col-lg-3 col-md-6 mb-4">
-          <h4 class="mb-1 text-dark text-center">Lingue</h4>
+          <h4 class="mb-1 text-dark text-center">{{__('ui.languages')}}</h4>
           <ul class="nav-item">
             <x-_locale lang="it"/>
             <x-_locale lang="en"/>

@@ -28,6 +28,12 @@ return [
     'enter_your_details' => 'Inserisci i tuoi dati',
     'email' => 'Email',
     'password' => 'Password',
+    'accept' => 'Accetta',
+    'reject' => 'Rifiuta',
+    'languages' => 'Lingue',
+    'revised_announcements' => 'Annunci revisionati',
+    'latest_announcements' => 'Ultimi annunci',
+    'find_out_more' => 'Scopri di più',
 
 
     // scegli file creazione annuncio
@@ -42,5 +48,7 @@ return [
     'by_clicking_on_login_accept_the_terms' => 'Facendo clic su login, accetti i termini di utilizzo',
     'by_clicking_on_register_accept_the_terms' => 'Facendo clic su registrati, accetti i termini di utilizzo',
     'success' => 'Annuncio creato con successo',
-    'required' => 'Il campo :attribute è obbligatorio'
+    'required' => 'Il campo :attribute è obbligatorio',
+    'related_items' => 'Annunci correlati',
+    'announcements_to_be_revised' => 'Annunci da revisionare',
 ];

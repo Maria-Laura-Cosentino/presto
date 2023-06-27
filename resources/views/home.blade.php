@@ -91,7 +91,7 @@
     <section  class="container-fluid pt-4 pt-md-5 pb-4">
         <div class="row justify-content-center pt-0 pt-md-5">
             <div class="col-12">
-                <h2 class="text-center h2Sez2 black85 f-title fs-2">Ultimi Annunci</h2>
+                <h2 class="text-center h2Sez2 black85 f-title fs-2">{{__('ui.latest_announcements')}}</h2>
             </div>
             <div class="col-11 row justify-content-between">
                 @foreach ($announcements as $announcement)                    
@@ -217,7 +217,7 @@
 
         <div class="row justify-content-center py-4 py-sm-5">
             <div class="col-11 col-md-5 col-lg-3 py-0 py-md-3">
-                <a class="shadowBtn py-2 px-3 bg-warning w-100 text-decoration-none text-white rounded-2 text-center d-block fw-semibold f-text charSpace1 fs-4" href="">Scopri di più <i class="ps-2 fa-solid fa-right-to-bracket"></i></a>
+                <a class="shadowBtn py-2 px-3 bg-warning w-100 text-decoration-none text-white rounded-2 text-center d-block fw-semibold f-text charSpace1 fs-4" href="">{{__('ui.find_out_more')}} <i class="ps-2 fa-solid fa-right-to-bracket"></i></a>
             </div>
         </div>
     </section>
