@@ -28,7 +28,14 @@ return [
     'enter_your_details' => 'Inserisci i tuoi dati',
     'email' => 'Email',
     'password' => 'Password',
+
+
+    // scegli file creazione annuncio
     'created_by' => 'Annuncio di',
+    'choose_file' => 'Scegli file',
+    'no_file_selected' => 'Nessun file selezionato',
+    'photo_preview' => 'Anteprima foto',
+    'delete' => 'Cancella',
     'confirm_password' => 'Conferma password',
     'remember' => 'Ricordami',
     'first_time_on' => 'Prima volta su',

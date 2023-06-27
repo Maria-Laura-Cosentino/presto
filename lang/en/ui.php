@@ -29,7 +29,14 @@ return [
     'enter_your_details' => 'Enter your details',
     'email' => 'Email',
     'password' => 'Password',
+
+
+    // scegli file creazione annuncio
     'created_by' => 'Created by',
+    'choose_file' => 'Choose file',
+    'no_file_selected' => 'No file selected',
+    'photo_preview' => 'Photo preview',
+    'delete' => 'Delete',
     'confirm_password' => 'Confirm password',
     'remember' => 'Remember me',
     'first_time_on' => 'First time on',

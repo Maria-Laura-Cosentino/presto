@@ -29,7 +29,14 @@ return [
     'enter_your_details' => 'Introduzca sus datos',
     'email' => 'Correo electrònico',
     'password' => 'Contraseña',
+
+
+    // scegli file creazione annuncio
     'created_by' => 'Anuncio de',
+    'choose_file' => 'Seleccione archivo',
+    'no_file_selected' => 'Ningún archivo seleccionado',
+    'photo_preview' => 'Vista previa de fotos',
+    'delete' => 'Borra',
     'confirm_password' => 'Confirmar contraseña',
     'remember' => 'Recuérdame',
     'first_time_on' => 'Primera vez en',

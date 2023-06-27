@@ -150,7 +150,6 @@ return [
     'url' => 'The :attribute field must be a valid URL.',
     'ulid' => 'The :attribute field must be a valid ULID.',
     'uuid' => 'The :attribute field must be a valid UUID.',
-    'title'=> 'title',
 
     /*
     |--------------------------------------------------------------------------
@@ -180,6 +179,11 @@ return [
     |
     */
 
-    'attributes' => [],
+    'attributes' => [
+        'title'=> 'title',
+        'price' => 'price',
+        'body' => 'body',
+        'category_id' => 'category',
+    ],
 
 ];
