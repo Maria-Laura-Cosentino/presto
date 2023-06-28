@@ -50,5 +50,11 @@ return [
     'by_clicking_on_register_accept_the_terms' => 'By clicking on register, you are agreeing to the Terms of Use',
     'editor_area' => 'Editor area',
     'related_items' => 'Related items',
+    'image_review' => 'Image review',
+    'adult' => 'Adult',
+    'medical' => 'Medical',
+    'violence' => 'Violence',
+    'racy' => 'Racy',
+    'spoof' => 'Spoof',
     'announcements_to_be_revised' => 'Announcements to be revised',
 ];

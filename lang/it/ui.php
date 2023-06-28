@@ -50,5 +50,11 @@ return [
     'success' => 'Annuncio creato con successo',
     'required' => 'Il campo :attribute è obbligatorio',
     'related_items' => 'Annunci correlati',
+    'image_review' => 'Revisione immagini',
+    'adult' => 'Adulti',
+    'medical' => 'Medicina',
+    'violence' => 'Violenza',
+    'racy' => 'Contenuto ammiccante',
+    'spoof' => 'Satira',
     'announcements_to_be_revised' => 'Annunci da revisionare',
 ];

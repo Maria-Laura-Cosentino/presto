@@ -49,6 +49,12 @@ return [
     'by_clicking_on_login_accept_the_terms' => 'Haciendo clic en iniciar sesión, aceptas los términos de uso',
     'by_clicking_on_register_accept_the_terms' => 'Haciendo clic en regístrate, aceptas los términos de uso',
     'related_items' => 'Anuncios relacionados',
+    'image_review' => 'Revisión de imágenes',
+    'adult' => 'Adultos',
+    'medical' => 'Medicina',
+    'violence' => 'Violencia',
+    'racy' => 'Atrevido',
+    'spoof' => 'Sátira',
     'announcements_to_be_revised' => 'Anuncios a revisar',
     
 ];

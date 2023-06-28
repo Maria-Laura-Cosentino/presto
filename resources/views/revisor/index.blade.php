@@ -61,12 +61,12 @@
                                                 </div>
                                                 <hr>
                                                 <div class="card-body">
-                                                    <h5>Revisione immagini</h5>
-                                                    <p> Adulti: <span class="{{$image->adult}}"> </span></p> 
-                                                    <p> Satira: <span class="{{$image->spoof}}"> </span></p>
-                                                    <p> Medicina: <span class="{{$image->medical}}"> </span></p>
-                                                    <p> Violenza: <span class="{{$image->violence}}"> </span></p>
-                                                    <p> Contenuto ammiccante: <span class="{{$image->racy}}"> </span></p>
+                                                    <h5>{{__('ui.image_review')}}</h5>
+                                                    <p> {{__('ui.adult')}}: <span class="{{$image->adult}}"> </span></p> 
+                                                    <p> {{__('ui.spoof')}}: <span class="{{$image->spoof}}"> </span></p>
+                                                    <p> {{__('ui.medical')}}: <span class="{{$image->medical}}"> </span></p>
+                                                    <p> {{__('ui.violence')}}: <span class="{{$image->violence}}"> </span></p>
+                                                    <p> {{__('ui.racy')}}: <span class="{{$image->racy}}"> </span></p>
                                                 </div>
                                             </div>
                                         </div>
@@ -113,8 +113,8 @@
                                     </div>
                                     <div class="card-body">
                                       <h5 class="card-title">{{$announcement_to_check->title}}</h5>
-                                        <p class="card-title pt-3"> <span class="fw-semibold"> Prezzo: </span>  {{$announcement_to_check->price}} €</p>   
-                                      <p class="py-2"> <span class="fw-semibold"> Descrizione: </span> <br> {{$announcement_to_check->body}}</p>
+                                        <p class="card-title pt-3"> <span class="fw-semibold"> {{__('ui.price')}}: </span>  {{$announcement_to_check->price}} €</p>   
+                                      <p class="py-2"> <span class="fw-semibold"> {{__('ui.description')}}: </span> <br> {{$announcement_to_check->body}}</p>
                                     </div>
                                     <div class="card-footer text-body-secondary">
                                         {{__('ui.published_on')}}: {{$announcement_to_check->created_at->format('d/m/Y')}}
