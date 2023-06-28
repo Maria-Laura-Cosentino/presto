@@ -49,7 +49,7 @@
         <div class="row justify-content-center">
             <div class="col-11 col-md-10 col-xl-8 row justify-content-center justify-content-md-between align-items-center">
                 <div class="col-12 col-md-4 p-2 sez1BigP">
-                    <p class="mb-2">Rendi la tua vita un capolavoro</p>
+                    <p class="mb-2 text-center text-md-end">Rendi la tua vita un capolavoro</p>
                 </div>
                 
                 <div class=" col-12 col-md-2 p-2 py-0 px-1 d-flex d-md-block justify-content-center">
@@ -73,8 +73,8 @@
                     <i class="fa-solid fa-circle dim_decoration5 p-1 text-center"></i>
                 </div>
                 
-                <div class=" col-12 col-md-4 p-2 text-center text-md-start black85 charSpace1 p-text-Sez1">
-                    <p class="mt-2">Diffondiamo le arti nel mondo con costante impegno e passione. Dal 2020 diamo la possibilità alle persone di riunirsi per creare, vendere, acquistare e collezionare articoli unici sul nostro marketplace.</p>
+                <div class=" col-12 col-md-4 p-2 text-center text-md-start black85 charSpace1">
+                    <p class="mt-2 p-text-Sez1">Diffondiamo le arti nel mondo con costante impegno e passione. Dal 2020 diamo la possibilità alle persone di riunirsi per creare, vendere, acquistare e collezionare articoli unici sul nostro marketplace.</p>
                 </div>
                 
             </div>
@@ -89,7 +89,7 @@
             <div class="col-12">
                 <h2 class="text-center h2Sez2 black85 f-title fs-2">{{__('ui.latest_announcements')}}</h2>
             </div>
-            <div class="col-11 row justify-content-between">
+            <div class="col-11 row justify-content-center justify-content-lg-between">
                 @foreach ($announcements as $announcement)                    
                 <!-- Card -->
                 <div class="col-12 col-sm-9 col-lg-5 col-xl-4 d-flex justify-content-center pt-4 pt-xl-5 px-5">
@@ -164,173 +164,189 @@
 
 <section id="h1_header" class="container-fluid  justify-content-center sez3_MDtoXL">
     
-        <div class="row padCustSez3 justify-content-center max-W-Sez5">
-            <!--1--><div class="col-11 col-md-4 d-md-flex justify-content-end align-items-end contCircleCust">
-                <div   class="circleCust rounded-circle d-flex justify-content-center align-items-center"> 
-                    <a href="{{route('categoryShow', ['category' => $categories[0]])}}" class="d-block text-decoration-none" >
-                        <div class="text-center img-sez5 black85"> <i class="fa-solid fa-print"></i></div>
-                        <h4 class="text-center h4-Sez5 ">{{$categories[0]->name}}</h4>
-                    </a>
-                </div>
-            </div>
-            <!--2--><div class="col-11 col-md-4 d-md-flex justify-content-center align-items-center contCircleCust">
-                <div class="circleCust rounded-circle d-flex justify-content-center align-items-center"> 
-                    <a href="{{route('categoryShow', ['category' => $categories[1]])}}" class="d-block text-decoration-none" >
-                        <div class="text-center img-sez5 black85"> <i class="fa-solid fa-camera-retro"></i></i></div>
-                        <h4 class="text-center h4-Sez5 ">{{$categories[1]->name}}</h4>
-                    </a>
-                </div>
-            </div>
-            <!--3--><div class="col-11 col-md-4 d-md-flex justify-content-start align-items-end contCircleCust">
-                <div  class="circleCust rounded-circle d-flex justify-content-center align-items-center"> 
-                    <a href="{{route('categoryShow', ['category' => $categories[2]])}}" class="d-block text-decoration-none">
-                        <div class="text-center img-sez5 black85"> <i class="fa-regular fa-image"></i></div>
-                        <h4 class="text-center h4-Sez5 ">{{$categories[2]->name}}</h4>
-                    </a>
-                </div>
-            </div>
-            
-            <div class="row">
-                
-            </div>
-            <!--4--><div class="col-11 col-md-4 d-md-flex justify-content-center align-items-center contCircleCust">
-                <div class="circleCust rounded-circle d-flex justify-content-center align-items-center"> 
-                    <a href="{{route('categoryShow', ['category' => $categories[0]])}}" class="d-block text-decoration-none">
-                        <div class="text-center img-sez5 black85"> <i class="fa-solid fa-paintbrush"></i></div>
-                        <h4 class="text-center h4-Sez5 ">{{$categories[3]->name}}</h4>
-                    </a>
-                </div>
-            </div>
-            <!--5--><div class="col-11 col-md-4 d-md-flex justify-content-center align-items-center contCircleCust">
-                
-                <div class="bordCircContCenter rounded-circle">
-                    <div class="circleCustCenter rounded-circle d-flex  justify-content-center align-items-center">
-                        <h2 class="textWhite2 display-2 fw-bold h2Sez3">Categorie</h2>
-                    </div>
-                </div>
-            </div>
-            <!--6--><div class="col-11 col-md-4 d-md-flex justify-content-center align-items-center contCircleCust">
-                <div class="circleCust rounded-circle d-flex justify-content-center align-items-center"> 
-                    <a href="{{route('categoryShow', ['category' => $categories[0]])}}" class="d-block text-decoration-none">
-                        <div class="text-center img-sez5 black85"> <i class="fa-solid fa-dragon"></i></div>
-                        <h4 class="text-center h4-Sez5 ">{{$categories[4]->name}}</h4>
-                    </a>
-                </div>
-            </div>
-            
-            <div class="row">
-                
-            </div>
-            <!--7--><div class="col-11 col-md-4 d-md-flex justify-content-end align-items-start contCircleCust">
-                <div class="circleCust rounded-circle d-flex justify-content-center align-items-center"> 
-                    <a href="{{route('categoryShow', ['category' => $categories[0]])}}" class="d-block text-decoration-none">
-                        <div class="text-center img-sez5 black85"> <i class="fa-solid fa-hand-sparkles"></i></div>
-                        <h4 class="text-center h4-Sez5 ">{{$categories[5]->name}}</h4>
-                    </a>
-                </div>
-            </div>
-            <!--8--><div class="col-11 col-md-4 d-md-flex justify-content-center align-items-center contCircleCust">
-                <div class="circleCust rounded-circle d-flex justify-content-center align-items-center"> 
-                    <a href="{{route('categoryShow', ['category' => $categories[0]])}}" class="d-block text-decoration-none">
-                        <div class="text-center img-sez5 black85"> <i class="fa-solid fa-wine-bottle"></i></div>
-                        <h4 class="text-center h4-Sez5 ">{{$categories[6]->name}}</h4>
-                    </a>
-                </div>
-            </div>
-            <!--9--><div class="col-11 col-md-4 d-md-flex justify-content-start align-items-start contCircleCust">
-                <div class="circleCust rounded-circle d-flex justify-content-center align-items-center"> 
-                    <a href="{{route('categoryShow', ['category' => $categories[0]])}}" class="d-block text-decoration-none">
-                        <div class="text-center img-sez5 black85"><i class="fa-solid fa-compact-disc"></i></div>
-                        <h4 class="text-center h4-Sez5 ">{{$categories[7]->name}}</h4>
-                    </a>
-                </div>
-            </a>
-            
-        </div>
-    </div>
+     <div class="row padCustSez3 justify-content-center max-W-Sez5">
+         <!--1--><div class="col-11 col-md-4 d-md-flex justify-content-end align-items-end contCircleCust">
+             <div   class="circleCust rounded-circle d-flex justify-content-center align-items-center"> 
+                 <a href="{{route('categoryShow', ['category' => $categories[0]])}}" class="d-block text-decoration-none" >
+                     <div class="text-center img-sez5 black85"> <i class="fa-solid fa-print"></i></div>
+                     <h4 class="text-center h4-Sez5 ">{{$categories[0]->name}}</h4>
+                 </a>
+             </div>
+         </div>
+         <!--2--><div class="col-11 col-md-4 d-md-flex justify-content-center align-items-center contCircleCust">
+             <div class="circleCust rounded-circle d-flex justify-content-center align-items-center"> 
+                 <a href="{{route('categoryShow', ['category' => $categories[1]])}}" class="d-block text-decoration-none" >
+                     <div class="text-center img-sez5 black85"> <i class="fa-solid fa-camera-retro"></i></i></div>
+                     <h4 class="text-center h4-Sez5 ">{{$categories[1]->name}}</h4>
+                 </a>
+             </div>
+         </div>
+         <!--3--><div class="col-11 col-md-4 d-md-flex justify-content-start align-items-end contCircleCust">
+             <div  class="circleCust rounded-circle d-flex justify-content-center align-items-center"> 
+                 <a href="{{route('categoryShow', ['category' => $categories[2]])}}" class="d-block text-decoration-none">
+                     <div class="text-center img-sez5 black85"> <i class="fa-regular fa-image"></i></div>
+                     <h4 class="text-center h4-Sez5 ">{{$categories[2]->name}}</h4>
+                 </a>
+             </div>
+         </div>
+         
+         <div class="row">
+             
+         </div>
+         <!--4--><div class="col-11 col-md-4 d-md-flex justify-content-center align-items-center contCircleCust">
+             <div class="circleCust rounded-circle d-flex justify-content-center align-items-center"> 
+                 <a href="{{route('categoryShow', ['category' => $categories[3]])}}" class="d-block text-decoration-none">
+                     <div class="text-center img-sez5 black85"> <i class="fa-solid fa-paintbrush"></i></div>
+                     <h4 class="text-center h4-Sez5 ">{{$categories[3]->name}}</h4>
+                 </a>
+             </div>
+         </div>
+         <!--5--><div class="col-11 col-md-4 d-md-flex justify-content-center align-items-center contCircleCust">
+             
+             <div class="bordCircContCenter rounded-circle">
+                 <div class="circleCustCenter rounded-circle d-flex  justify-content-center align-items-center">
+                     <h2 class="textWhite2 display-2 fw-bold h2Sez3">Categorie</h2>
+                 </div>
+             </div>
+         </div>
+         <!--6--><div class="col-11 col-md-4 d-md-flex justify-content-center align-items-center contCircleCust">
+             <div class="circleCust rounded-circle d-flex justify-content-center align-items-center"> 
+                 <a href="{{route('categoryShow', ['category' => $categories[4]])}}" class="d-block text-decoration-none">
+                     <div class="text-center img-sez5 black85"> <i class="fa-solid fa-dragon"></i></div>
+                     <h4 class="text-center h4-Sez5 ">{{$categories[4]->name}}</h4>
+                 </a>
+             </div>
+         </div>
+         
+         <div class="row">
+             
+         </div>
+         <!--7--><div class="col-11 col-md-4 d-md-flex justify-content-end align-items-start contCircleCust">
+             <div class="circleCust rounded-circle d-flex justify-content-center align-items-center"> 
+                 <a href="{{route('categoryShow', ['category' => $categories[5]])}}" class="d-block text-decoration-none">
+                     <div class="text-center img-sez5 black85"> <i class="fa-solid fa-hand-sparkles"></i></div>
+                     <h4 class="text-center h4-Sez5 ">{{$categories[5]->name}}</h4>
+                 </a>
+             </div>
+         </div>
+         <!--8--><div class="col-11 col-md-4 d-md-flex justify-content-center align-items-center contCircleCust">
+             <div class="circleCust rounded-circle d-flex justify-content-center align-items-center"> 
+                 <a href="{{route('categoryShow', ['category' => $categories[6]])}}" class="d-block text-decoration-none">
+                     <div class="text-center img-sez5 black85"> <i class="fa-solid fa-wine-bottle"></i></div>
+                     <h4 class="text-center h4-Sez5 ">{{$categories[6]->name}}</h4>
+                 </a>
+             </div>
+         </div>
+         <!--9--><div class="col-11 col-md-4 d-md-flex justify-content-start align-items-start contCircleCust">
+             <div class="circleCust rounded-circle d-flex justify-content-center align-items-center"> 
+                 <a href="{{route('categoryShow', ['category' => $categories[7]])}}" class="d-block text-decoration-none">
+                     <div class="text-center img-sez5 black85"><i class="fa-solid fa-compact-disc"></i></div>
+                     <h4 class="text-center h4-Sez5 ">{{$categories[7]->name}}</h4>
+                 </a>
+             </div>
+         </a>
+         
+     </div>
+ </div>
 </section>
 
-     <section class="container-fluid sez5_mobile pt-5 mt-5">
-        <div class="row justify-content-center">
-            <div class="col-11">
-                <h2 class="text-center w-100 h2Sez2 black85 f-title fs-2 pb-4">Categorie</h2>
-            </div>
-
-            <div class="col-11 d-flex justify-content-center pb-4">
-                <div class=" circleCustMobile rounded-circle d-flex justify-content-center align-items-center"> 
-                    <a href="{{route('categoryShow', ['category' => $categories[0]])}}" class=" text-decoration-none">
-                        <div class="text-center img-sez5 black85"> <i class="fa-solid fa-print"></i></div>
-                        <h4 class="text-center h4-Sez5 ">{{$categories[0]->name}}</h4>
-                    </a>
-                </div>
-            </div>
-
-            <div class="col-11 d-flex justify-content-center pb-4">
-                <div class=" circleCustMobile rounded-circle d-flex justify-content-center align-items-center"> 
-                    <a href="{{route('categoryShow', ['category' => $categories[1]])}}" class=" text-decoration-none">
-                        <div class="text-center img-sez5 black85"> <i class="fa-solid fa-camera-retro"></i></i></div>
-                        <h4 class="text-center h4-Sez5 ">{{$categories[1]->name}}</h4>
-                    </a>
-                </div>
-            </div>
 
 
-            <div class="col-11 d-flex justify-content-center pb-4">
-                <div class=" circleCustMobile rounded-circle d-flex justify-content-center align-items-center"> 
-                    <a href="{{route('categoryShow', ['category' => $categories[2]])}}" class=" text-decoration-none">
-                        <div class="text-center img-sez5 black85"> <i class="fa-regular fa-image"></i></div>
-                        <h4 class="text-center h4-Sez5 ">{{$categories[2]->name}}</h4>
-                    </a>
-                </div>
-            </div>
-
-            <div class="col-11 d-flex justify-content-center pb-4">
-                <div class=" circleCustMobile rounded-circle d-flex justify-content-center align-items-center"> 
-                    <a href="{{route('categoryShow', ['category' => $categories[3]])}}" class=" text-decoration-none">
-                        <div class="text-center img-sez5 black85"> <i class="fa-solid fa-paintbrush"></i></div>
-                        <h4 class="text-center h4-Sez5 ">{{$categories[3]->name}}</h4>
-                    </a>
-                </div>
-            </div>
-
-            <div class="col-11 d-flex justify-content-center pb-4">
-                <div class=" circleCustMobile rounded-circle d-flex justify-content-center align-items-center"> 
-                    <a href="{{route('categoryShow', ['category' => $categories[4]])}}" class=" text-decoration-none">
-                        <div class="text-center img-sez5 black85"> <i class="fa-solid fa-dragon"></i></div>
-                        <h4 class="text-center h4-Sez5 ">{{$categories[4]->name}}</h4>
-                    </a>
-                </div>
-            </div>
-
-            <div class="col-11 d-flex justify-content-center pb-4">
-                <div class=" circleCustMobile rounded-circle d-flex justify-content-center align-items-center"> 
-                    <a href="{{route('categoryShow', ['category' => $categories[5]])}}" class=" text-decoration-none">
-                        <div class="text-center img-sez5 black85"> <i class="fa-solid fa-hand-sparkles"></i></div>
-                        <h4 class="text-center h4-Sez5 ">{{$categories[5]->name}}</h4>
-                    </a>
-                </div>
-            </div>
-
-            <div class="col-11 d-flex justify-content-center pb-4">
-                <div class=" circleCustMobile rounded-circle d-flex justify-content-center align-items-center"> 
-                    <a href="{{route('categoryShow', ['category' => $categories[6]])}}" class=" text-decoration-none">
-                        <div class="text-center img-sez5 black85"> <i class="fa-solid fa-wine-bottle"></i></div>
-                        <h4 class="text-center h4-Sez5 ">{{$categories[6]->name}}</h4>
-                    </a>
-                </div>
-            </div>
-            
-            <div class="col-11 d-flex justify-content-center pb-4">
-                <div class=" circleCustMobile rounded-circle d-flex justify-content-center align-items-center"> 
-                    <a href="{{route('categoryShow', ['category' => $categories[7]])}}" class=" text-decoration-none">
-                        <div class="text-center img-sez5 black85"> <i class="fa-solid fa-compact-disc"></i></i></div>
-                        <h4 class="text-center h4-Sez5 ">{{$categories[7]->name}}</h4>
-                    </a>
-                </div>
-            </div>
-           
+    <section class="container-fluid sez5_mobile pt-5 mt-0 mt-md-5">
+    <div class="row justify-content-center">
+        <div class="col-11">
+            <h2 class="text-center w-100 h2Sez2 black85 f-title fs-2 pb-4">Categorie</h2>
         </div>
-     </section>
+    </div>
+    </section>
+
+    <div class="containerCustom sez5_mobile ps-4 pb-5 mb-5">
+    
+        
+    <div class=" circleCustMobile content rounded-circle"> 
+        <div class="h-100 d-flex justify-content-center align-items-center">
+            <a href="{{route('categoryShow', ['category' => $categories[0]])}}" class=" text-decoration-none">
+                <div class="text-center img-sez5 black85"> <i class="fa-solid fa-print"></i></div>
+                <h4 class="text-center h4-Sez5 ">{{$categories[0]->name}}</h4>
+            </a>  
+        </div>
+        
+    </div>
+
+
+    <div class=" circleCustMobile content rounded-circle "> 
+        <div class="h-100 d-flex justify-content-center align-items-center">
+            <a href="{{route('categoryShow', ['category' => $categories[1]])}}" class=" text-decoration-none">
+                <div class="text-center img-sez5 black85"> <i class="fa-solid fa-camera-retro"></i></i></div>
+                <h4 class="text-center h4-Sez5 ">{{$categories[1]->name}}</h4>
+            </a>
+        </div>
+    </div>
+
+
+    <div class=" circleCustMobile content rounded-circle "> 
+        <div class="h-100 d-flex justify-content-center align-items-center">
+            <a href="{{route('categoryShow', ['category' => $categories[2]])}}" class=" text-decoration-none">
+                <div class="text-center img-sez5 black85"> <i class="fa-regular fa-image"></i></div>
+                <h4 class="text-center h4-Sez5 ">{{$categories[2]->name}}</h4>
+            </a>
+        </div>    
+    </div>
+
+
+    <div class=" circleCustMobile content rounded-circle "> 
+        <div class="h-100 d-flex justify-content-center align-items-center">
+            <a href="{{route('categoryShow', ['category' => $categories[3]])}}" class=" text-decoration-none">
+                <div class="text-center img-sez5 black85"> <i class="fa-solid fa-paintbrush"></i></div>
+                <h4 class="text-center h4-Sez5 ">{{$categories[3]->name}}</h4>
+            </a>
+        </div>
+    </div>
+
+
+    <div class=" circleCustMobile content rounded-circle "> 
+        <div class="h-100 d-flex justify-content-center align-items-center">
+            <a href="{{route('categoryShow', ['category' => $categories[4]])}}" class=" text-decoration-none">
+                <div class="text-center img-sez5 black85"> <i class="fa-solid fa-dragon"></i></div>
+                <h4 class="text-center h4-Sez5 ">{{$categories[4]->name}}</h4>
+            </a>
+        </div>
+    </div>
+
+
+    <div class=" circleCustMobile content rounded-circle "> 
+        <div class="h-100 d-flex justify-content-center align-items-center">
+        <a href="{{route('categoryShow', ['category' => $categories[5]])}}" class=" text-decoration-none">
+            <div class="text-center img-sez5 black85"> <i class="fa-solid fa-hand-sparkles"></i></div>
+            <h4 class="text-center h4-Sez5 ">{{$categories[5]->name}}</h4>
+        </a>
+    </div>
+    </div>
+
+
+    <div class=" circleCustMobile content rounded-circle "> 
+        <div class="h-100 d-flex justify-content-center align-items-center">
+        <a href="{{route('categoryShow', ['category' => $categories[6]])}}" class=" text-decoration-none">
+            <div class="text-center img-sez5 black85"> <i class="fa-solid fa-wine-bottle"></i></div>
+            <h4 class="text-center h4-Sez5 ">{{$categories[6]->name}}</h4>
+        </a>
+    </div>
+    </div>
+
+
+
+    <div class=" circleCustMobile content rounded-circle "> 
+        <div class="h-100 d-flex justify-content-center align-items-center">
+        <a href="{{route('categoryShow', ['category' => $categories[7]])}}" class=" text-decoration-none">
+            <div class="text-center img-sez5 black85"> <i class="fa-solid fa-compact-disc"></i></i></div>
+            <h4 class="text-center h4-Sez5 ">{{$categories[7]->name}}</h4>
+        </a>
+    </div>
+    </div>
+    
+    
+    </div>
+
 
      <!-- sez4 / Offerte-->
     <section class="container-fluid pt-3 pb-5 mb-md-5">

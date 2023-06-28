@@ -1,6 +1,6 @@
 
 <x-layout>
-    <div class="container-fluid mb-4 mt-5">
+    <div class="container-fluid mb-4 mt-5 ">
         <div class="row bg-body-tertiary py-5">
           <div class="col-12">
               <h1 class="text-center fw-semibold display-2">{{__('ui.category')}}: {{$category->name}}</h1>
@@ -13,9 +13,13 @@
                 <h1>Categoria: {{$category->name}} </h1>
             </div>
         </div> --}}
-        <div class="row">
+        <div class="row main_min_h">
             @forelse ($category->announcements as $announcement)
-                <x-card :announcement="$announcement"></x-card>            
+                @if ($announcement->is_accepted == false)
+                @continue
+                @else
+                <x-card :announcement="$announcement"></x-card>  
+                @endif          
             @empty
                 <div class="col-12 m-3">
                     <h2 class="mb-5">Non ci sono annunci presenti per questa categoria</h2>

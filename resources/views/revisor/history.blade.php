@@ -1,4 +1,5 @@
 <x-layout>
+    <div class="main_min_h2">
     <div class="container-fluid mb-4 mt-5">
         <div class="row bg-body-tertiary py-5">
             <div class="col-12 mt-5">
@@ -12,7 +13,7 @@
         <div class="row my-3">
             @if (session()->has('restore.message'))
             <div class="alert alert-success">
-             {{session('restore.message')}}
+            {{session('restore.message')}}
             </div>
             @endif
         </div>
@@ -48,7 +49,7 @@
                 <div class="col-3 col-md-1">
                     {{$announcement_to_restore->links()}}
                 </div>
-              
+            
             </div>
             <div class="col-12">
                 <h2 class="pt-5 fs-1">Annunci accettati</h2>
@@ -79,7 +80,9 @@
         <div class="col-10 col-md-4 d-flex justify-content-center">
             {{$announcement_to_restore_t->links()}}
         </div>
-      
+    
     </div>
     @endif
+    </div>
+    
 </x-layout>

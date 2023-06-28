@@ -68,6 +68,14 @@ color: black;
 .main_min_h{
     min-height: 80vh;
 }
+.main_min_h2{
+    min-height: 85vh;
+}
+
+
+.cardCustEdo{
+    max-height: 800px;
+}
 
 @media screen and (max-width:768px){
     .main_min_h{
@@ -206,6 +214,14 @@ body {
 @media screen and (min-width: 2000px) {
     .p-text-Sez1{
         line-height: 2.5rem;
+       
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .p-text-Sez1{
+        font-size: 1rem;
+        line-height: 2.2rem;
        
     }
 }

@@ -1,5 +1,5 @@
 <x-layout>
-  <div class="container my-5 mt-5">
+  <div class="container my-5 mt-5 main_min_h2">
       <div class="row my-5">
           {{-- <div class="col-12 col-md-6">
               <form method="post" action="{{route('login')}}">
@@ -34,11 +34,11 @@
                 <input type="password" name="password" class="form-control" id="floatingPassword" placeholder="{{__('ui.password')}}">
                 <label for="floatingPassword">{{__('ui.password')}}</label>
               </div>
-              <div class="checkbox mb-3">
+              {{-- <div class="checkbox mb-3">
                 <label>
                   <input type="checkbox" value="remember-me"> {{__('ui.remember')}}
                 </label>
-              </div>
+              </div> --}}
               <button class="w-100 btn btn-lg btn-dark mt-3 mb-2" type="submit">Login</button>
               {{-- <hr class="my-4"> --}}
               <small class="text-body-secondary">{{__('ui.by_clicking_on_login_accept_the_terms')}}.</small>

@@ -1,5 +1,5 @@
 <x-layout>
-    <div class="min-h-cust mt-5">
+    <div class="min-h-cust mt-5 ">
         <div class="container-fluid mb-4">
             <div class="row bg-body-tertiary py-5">
               <div class="col-12">
@@ -22,7 +22,7 @@
                 <x-card
                 :announcement="$announcement"></x-card>
                 @empty
-                    <div class="col-12 m-3">
+                    <div class="col-12 m-3 ">
                         <div class="alert alert-warning py-3 shadow">
                             <p>Non ci sono annunci presenti per questa ricerca</p>
                         </div> 

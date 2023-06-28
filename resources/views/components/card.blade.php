@@ -1,4 +1,4 @@
-<div class="col-12 col-md-4 my-4 d-flex justify-content-center">
+<div class="col-12 col-sm-6 col-lg-4 my-4 d-flex justify-content-center cardCustEdo">
     <div class="card shadow">
         <img src="{{!$announcement->images()->get()->isEmpty() ? $announcement->images()->first()->getUrl(800, 800) : "https://picsum.photos/1200/1200"}}" class="card-img-top" alt="...">
         <div class="card-body px-4">
