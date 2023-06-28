@@ -31,7 +31,7 @@
                     <label for="floatingEmail">Email</label>
                 </div>
                   <div class="mb-4">
-                    <textarea name="motivazione" class="form-control" placeholder="Perché vuoi diventare un revisore?" id="floatingTextarea" rows="10"></textarea>
+                    <textarea name="motivazione" class="form-control" placeholder="Perché vuoi diventare un revisore?" id="floatingTextarea" maxlength="130" rows="4"></textarea>
                     {{-- <label for="floatingTextarea">Comments</label> --}}
                   </div>
                 <button class="w-100 btn btn-lg btn-dark mt-3 mb-2" type="submit">Invia la tua richiesta</button>

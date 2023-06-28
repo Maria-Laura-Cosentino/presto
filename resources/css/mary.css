@@ -18,3 +18,162 @@
     --black85: rgb(74,71,71);
     --yellow: rgb(245, 188, 0);
 }
+
+.headerCust{
+    min-height: 80vh;
+    background: url('/public/images/headerImg-LQ.jpeg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+
+/* css Edo */
+
+@media screen and (max-width:768px){
+    .headerCust{
+        min-height: 50vh;
+    }
+}
+
+.fadeHead{
+    height: 100px;
+    background: linear-gradient(rgba(176, 179, 179, 0), rgba(240,240,240,1));
+}
+
+.spacer1Head{
+    height: 100px;
+}
+
+.h1_home{
+    padding-top: 35vh;
+    color: var(--white);
+    font-family: var(--fontTitoli);
+    font-size: calc(6vh + 5vw);
+    text-shadow: 1px 1px 50px rgb(155, 155, 155);
+    letter-spacing: 8px;
+    font-weight: 600;
+}
+
+@media screen and (max-width: 767px) {
+    .h1_home{
+        padding-top: 10vh;
+        letter-spacing: 3px;
+        font-size: calc(5.6vh + 5vw);
+    }
+}
+@media screen and (min-width: 1620px) {
+    .h1_home{
+        padding-top: 17vh;
+    }
+}
+
+@media screen and (min-width: 1900px) {
+    .h1_home{
+        padding-top: 30vh;
+    }
+}
+
+.h2_home{
+    color: var(--black85);
+    font-family: var(--fontTitoli);
+    font-size: calc(2.5vh + 1.9vw);
+    text-shadow: 1px 1px 50px rgb(252, 251, 251);
+    letter-spacing: 2px;
+}
+@media screen and (max-width: 767px) {
+    .h2_home{
+        
+        font-size: calc(2vh + 1.8vw);
+        color: var(--white);
+        text-shadow: 10px 1px 30px rgb(27, 27, 27);
+    }
+}
+
+.dim_decoration5{
+    display: block;
+    font-size: 5px;
+    color: var(--black85);
+}
+
+/* css custom */
+
+.sez1BigP{
+    text-align: right;
+}
+
+@media screen and (max-width: 667px) {
+    .sez1BigP{
+        text-align: center;
+        margin-bottom: 16px;
+    }
+
+    .dim_decoration5{
+        display: inline;
+    }
+
+    .box{
+        margin-top: 16px;
+    }
+}
+
+
+.label{
+
+    color: var(--black85);
+}
+
+.h4_mail{
+
+    font-family: var(--fontTitoli);
+}
+
+.btn-revisor{
+
+    background-color: var(--yellow);
+    
+}
+
+.footer-email{
+    background-color: black;
+}
+
+.logo-mail{
+    color: var(--yellow);
+}
+
+/* Register*/
+
+.body-register{
+
+    border-top-right-radius: 0.375rem;
+    border-bottom-right-radius: 0.375rem;
+    border-top-left-radius: 0rem;
+    border-bottom-left-radius: 0rem;
+}
+
+.img-register{
+
+    border-top-right-radius: 0rem;
+    border-bottom-right-radius: 0rem;
+    border-top-left-radius: 0.375rem;
+    border-bottom-left-radius: 0.375rem;
+}
+
+@media screen and (max-width: 667px){
+    .img-register{
+
+        border-top-right-radius: 0rem;
+        border-bottom-right-radius: 0.375rem;
+        border-top-left-radius: 0rem;
+        border-bottom-left-radius: 0.375rem;
+    }
+
+    .body-register{
+
+        border-top-right-radius: 0.375rem;
+        border-bottom-right-radius: 0rem;
+        border-top-left-radius: 0.375rem;
+        border-bottom-left-radius: 0rem;
+    }
+}

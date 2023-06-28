@@ -32,8 +32,8 @@
     @if($announcement_to_check)
         <div class="container pt-5">
             <div class="row justify-content-center">
-                <div class="col-12 col-md-5 mb-5">
-                    <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+                <div class="col-12 mb-5">
+                    <div id="carouselExampleAutoplaying" class="carousel slide">
                         {{-- @if(count($announcement_to_check->images))
                         @else
                         @endif --}}
@@ -41,12 +41,49 @@
                             <div class="carousel-inner">
                                 @foreach ($announcement_to_check->images as $image )
                                 <div class="carousel-item @if($loop->first)active @endif">
-                                    <img src="{{$image->getUrl(800, 800)}}" class="w-100 rounded-2"  alt="...">
-                                  </div>
+                                    <div class="d-block d-md-flex justify-content-md-center">
+                                        <div class="img-carousel">
+                                            <img src="{{$image->getUrl(800, 800)}}" class="w-100 rounded-2"  alt="...">
+                                        </div>
+                                        <div class="text-carousel-cont ps-md-5 pt-4 pt-md-0">
+                                            <div>
+                                                <div class="my-3">
+                                                    <h5> Tags </h5>
+                                                    @if($image->labels)
+                                                        @foreach ($image->labels as $label)
+                                                            @if (!$loop->last)
+                                                                <p class="d-inline"> {{$label}}, </p>
+                                                            @else
+                                                                <p class="d-inline"> {{$label}}. </p>
+                                                            @endif
+                                                        @endforeach
+                                                    @endif
+                                                </div>
+                                                <hr>
+                                                <div class="card-body">
+                                                    <h5>Revisione immagini</h5>
+                                                    <p> Adulti: <span class="{{$image->adult}}"> </span></p> 
+                                                    <p> Satira: <span class="{{$image->spoof}}"> </span></p>
+                                                    <p> Medicina: <span class="{{$image->medical}}"> </span></p>
+                                                    <p> Violenza: <span class="{{$image->violence}}"> </span></p>
+                                                    <p> Contenuto ammiccante: <span class="{{$image->racy}}"> </span></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                                 @endforeach
                             </div>
-                        @endif
-                        @if ($announcement_to_check->images()->get()->isEmpty())
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                            @endif
+                            @if ($announcement_to_check->images()->get()->isEmpty())
                             <div class="carousel-inner">
                                 <div class="carousel-item active">
                                     <img src="https://picsum.photos/1200/1200" class="w-100 rounded-2"  alt="...">
@@ -58,32 +95,44 @@
                                     <img src="https://picsum.photos/1200/1203" class="w-100 rounded-2" alt="...">
                                 </div>
                             </div>
-                        @endif
-                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
-                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                          <span class="visually-hidden">Previous</span>
-                        </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
-                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                          <span class="visually-hidden">Next</span>
-                        </button>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                            @endif
+                        </div>     
+                        <div>
+                            <div class="p-custom pt-5">
+                                <div class="card">
+                                    <div class="card-header">
+                                        {{__('ui.category')}}: {{$announcement_to_check->category->name}}
+                                    </div>
+                                    <div class="card-body">
+                                      <h5 class="card-title">{{$announcement_to_check->title}}</h5>
+                                        <p class="card-title pt-3"> <span class="fw-semibold"> Prezzo: </span>  {{$announcement_to_check->price}} €</p>   
+                                      <p class="py-2"> <span class="fw-semibold"> Descrizione: </span> <br> {{$announcement_to_check->body}}</p>
+                                    </div>
+                                    <div class="card-footer text-body-secondary">
+                                        {{__('ui.published_on')}}: {{$announcement_to_check->created_at->format('d/m/Y')}}
+                                    </div>
+                                  </div>
+                            </div>
+                            <div class="p-custom">
+                                <p class="fs-2 py-2 text-uppercase border-bottom border-2 mt-2">{{__('ui.category')}}: {{$announcement_to_check->category->name}}</p>
+                                <h2 class="display-5 fw-bold">{{$announcement_to_check->title}}</h2>
+                                <p class="fs-4 py-2">{{$announcement_to_check->price}} €</p>        
+                                <p class="fs-3 py-2 fw-semibold">{{__('ui.published_on')}}: {{$announcement_to_check->created_at->format('d/m/Y')}}</p>
+                                <p class="fs-5 p-3 bg-light">{{$announcement_to_check->body}}</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="col-12 col-md-7">
-                    <div class="px-3">
-                        <p class="fs-2 py-2 text-uppercase border-bottom border-2 mt-2">{{__('ui.category')}}: {{$announcement_to_check->category->name}}</p>
-                        <h2 class="display-5 fw-bold">{{$announcement_to_check->title}}</h2>
-                        <p class="fs-4 py-2">{{$announcement_to_check->price}} €</p>        
-                        <p class="fs-3 py-2 fw-semibold">{{__('ui.published_on')}}: {{$announcement_to_check->created_at->format('d/m/Y')}}</p>
-                        <p class="fs-5 p-3 bg-light">{{$announcement_to_check->body}}</p>
-                    </div>
-                </div>
-            </div>
-           
-               
-          
-            <div class="row my-5">
-                <div class="px-4 my-3 d-flex justify-content-between">
+            <div class="p-custom my-5">
+                <div class="my-3 d-flex justify-content-between">
                 {{-- <div class="col-12 col-md-6"> --}}
                     <form action="{{route('revisor.accept_announcement', ['announcement' => $announcement_to_check])}}" method="post">
                         @csrf
