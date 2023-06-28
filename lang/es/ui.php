@@ -35,6 +35,8 @@ return [
     'revised_announcements' => 'Anuncios revisados',
     'latest_announcements' => 'Últimos anuncios',
     'find_out_more' => 'Descubre más',
+    'discover' => 'Descubre',
+    'announcements_to_review' => 'Anuncios a revisar',
 
 
     // scegli file creazione annuncio
@@ -56,5 +58,5 @@ return [
     'racy' => 'Atrevido',
     'spoof' => 'Sátira',
     'announcements_to_be_revised' => 'Anuncios a revisar',
-    
+    'there_are_no_announcements_to_review' => 'No hay anuncios que revisar',
 ];

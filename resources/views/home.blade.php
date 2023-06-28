@@ -209,7 +209,7 @@
             
                     <div class="bordCircContCenter rounded-circle">
                         <div class="circleCustCenter rounded-circle d-flex  justify-content-center align-items-center">
-                            <h2 class="textWhite2 display-2 fw-bold h2Sez3">Categorie</h2>
+                            <h2 class="textWhite2 display-2 fw-bold h2Sez3">{{__('ui.categories')}}</h2>
                         </div>
                     </div>
                 </div>
@@ -253,7 +253,7 @@
      <section class="container-fluid sez5_mobile pt-5 my-5">
         <div class="row justify-content-center">
             <div class="col-11">
-                <h2 class="text-center w-100 h2Sez2 black85 f-title fs-2 pb-4">Categorie</h2>
+                <h2 class="text-center w-100 h2Sez2 black85 f-title fs-2 pb-4">{{__('ui.categories')}}</h2>
             </div>
 
             <div class="col-11 d-flex justify-content-center pb-4">
@@ -355,7 +355,7 @@
                                         <h3 class="m-0 fs-5">Fotografie in Offerta</h3> 
                                         
                                         </div>
-                                        <a href="{{route('categoryShow', ['category' => $categories[1]])}}"  class="ms-2 btnCardSez4 rounded-2 py-2 px-4 text-decoration-none text-white text-center">Scopri</a>
+                                        <a href="{{route('categoryShow', ['category' => $categories[1]])}}"  class="ms-2 btnCardSez4 rounded-2 py-2 px-4 text-decoration-none text-white text-center">{{__('ui.discover')}}</a>
                                         
                                     </div>
                             </div>

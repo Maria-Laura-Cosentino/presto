@@ -35,6 +35,9 @@ return [
     'revised_announcements' => 'Revised announcements',
     'latest_announcements' => 'Latest announcements',
     'find_out_more' => 'Find out more',
+    'discover' => 'Discover',
+    'photos' => 'Photos',
+    'announcements_to_review' => 'Announcements to review',
 
 
     // scegli file creazione annuncio
@@ -57,4 +60,5 @@ return [
     'racy' => 'Racy',
     'spoof' => 'Spoof',
     'announcements_to_be_revised' => 'Announcements to be revised',
+    'there_are_no_announcements_to_review' => 'There are no announcements to review',
 ];
