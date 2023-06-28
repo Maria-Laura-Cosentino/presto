@@ -13,7 +13,7 @@ class CategorySeeder extends Seeder
      */
     public function run(): void
     {
-        // $categories = ['A', 'B', 'C', 'D', 'E','F', 'G', 'H', 'I', 'L'];
+    
         $categories = ['Stampe', 'Fotografia', 'Illustrazioni','Pittura', 'Scultura', 'Artigianato', 'Arte del vetro', 'Vinili'];
 
         foreach($categories as $category){
