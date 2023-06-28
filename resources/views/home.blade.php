@@ -105,9 +105,9 @@
                         <img class="rounded-circle w-100 shadowCard" src="{{!$announcement->images()->get()->isEmpty() ? $announcement->images()->first()->getUrl(800, 800) : 'https://picsum.photos/800/800'}}" alt="{{$announcement->title}}">
                         <div class="pt-2 pt-lg-4 pb-2 w-100 d-lg-flex justify-content-between">
                            <h3 class="text-start fs-4">{{$announcement->title}}</h3> 
-                           <h3 class=" fs-4">{{$announcement->price}} €</h3>
+                           
                         </div>
-
+                        <h3 class=" fs-4 pb-3">{{$announcement->price}} €</h3>
                         <div class=" w-100 d-lg-flex justify-content-between"> 
                             <div class="badge bg-dark bg-gradient rounded-pill mb-3 p-2">{{__('ui.category')}}: {{$announcement->category->name}} </div>
                             <a href="{{route('detailShow',compact('announcement'))}}" class="text-reset text-decoration-none fw-semibold fs-5">{{__('ui.detail')}} <i class="fa-solid fa-circle-arrow-right"></i></a>
