@@ -1,0 +1,40 @@
+.img-carousel{
+    width: 100%;
+}
+@media screen and (min-width:767px){
+    .img-carousel{
+        width: 40%;
+    }
+}
+.text-carousel-cont{
+    width: 100%;
+}
+@media screen and (min-width:767px){
+    .text-carousel-cont{
+        width: 40%;
+    }
+}
+.carousel-control-next-icon {
+    background-image: url('/public/images/nextarrow.svg') !important;
+}
+.carousel-control-prev-icon {
+    background-image: url('/public/images/backarrow.svg') !important;
+}
+@media screen and (max-width:575px){
+    .carousel-control-next-icon {
+        background-image: none !important;
+    }
+    .carousel-control-prev-icon {
+        background-image: none !important;
+    }
+}
+.p-custom{
+    padding-right: 10%;
+    padding-left: 10%;
+}
+@media screen and (max-width:575px){
+    .p-custom{
+        padding-right: 0%;
+        padding-left: 0%;
+    }
+}
