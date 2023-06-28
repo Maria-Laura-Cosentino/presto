@@ -14,7 +14,7 @@
           @if (Auth::user() && Auth::user()->is_revisor)
           <li class="translate-bottom badge mt-3 text-center text-md-center text-xl-center">
           <a href="{{route('revisor.index')}}" class="text-decoration-none text-reset">            
-            <button class="btn detail-cust nav-cust mt-2 {{App\Models\Announcement::toBeRevisionedCount() == 0 ? 'text-white' : 'text-danger' }}">Annunci da revisionare: {{App\Models\Announcement::toBeRevisionedCount()}}</button>
+            <button class="btn detail-cust2 nav-cust mt-2 {{App\Models\Announcement::toBeRevisionedCount() == 0 ? 'text-white' : 'text-danger' }}">Annunci da revisionare: {{App\Models\Announcement::toBeRevisionedCount()}}</button>
             </a>  
           </li>
           @endif
@@ -25,13 +25,13 @@
             <ul class="list-unstyled mb-0">
                <li class="mb-1" style="color: #4a4747;">{{__('ui.want_to_join_us')}}</li>
                <li class="m-3"><a href="{{route('be.revisor')}}" class="text-decoration-none text-custom" style="color:#cacaca;">{{__('ui.already_have_an_account')}}</a></li>
-               <button class="btn detail-cust fw-bold nav-cust mb-2"><a href="{{route('be.revisor')}}" class="text-decoration-none text-reset">{{__('ui.become_an_editor')}}</a></button>
+               <button class="btn detail-cust2 fw-bold nav-cust mb-2"><a href="{{route('be.revisor')}}" class="text-decoration-none text-reset">{{__('ui.become_an_editor')}}</a></button>
           @endif  
 
         {{-- login ko allora registrati --}}
           @if(Auth::user() == null)
             <h5 class="mt-2 text-dark">{{__('ui.work_with_us')}}</h5>
-             <button class="btn detail-cust fw-bold nav-cust text-dark mt-3">
+             <button class="btn detail-cust2 fw-bold nav-cust text-dark mt-3">
                <a href="{{route('register')}}" class="text-decoration-none text-reset" style="color:#cacaca;">{{__('ui.register_and_click_here')}}</a>
              </button>  
           @endif                          

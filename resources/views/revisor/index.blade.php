@@ -1,5 +1,5 @@
 <x-layout>
-    <div class="container-fluid mb-4">
+    <div class="container-fluid mb-4 mt-5">
         <div class="row bg-body-tertiary py-5">
             <div class="col-12">
                 <h1 class="text-center fw-semibold display-2">
@@ -10,8 +10,8 @@
     </div>
     <div class="container mt-5">
         <div class="row mb-5">
-            <div class="col-12 d-flex justify-content-end">
-                <a href="{{route('revisor.history')}}" class="text-reset text-decoration-none border rounded-1 fw-semibold shadow p-3 fs-3">{{__('ui.revised_announcements')}} <i class="fa-solid fa-circle-arrow-right"></i></a>
+            <div class="col-12 d-flex justify-content-center justify-content-md-end">
+                <a href="{{route('revisor.history')}}" class="text-reset text-decoration-none border rounded-1 fw-semibold shadow p-3 fs-3">{{__('ui.revised_announcements')}} <i class="fa-solid fa-circle-arrow-right ps-2"></i></a>
             </div>
         </div>
         <div class="row my-3">
@@ -41,7 +41,7 @@
                             <div class="carousel-inner">
                                 @foreach ($announcement_to_check->images as $image )
                                 <div class="carousel-item @if($loop->first)active @endif">
-                                    <div class="d-block d-md-flex justify-content-md-center">
+                                    <div class="d-block d-md-flex align-items-md-center justify-content-md-center">
                                         <div class="img-carousel">
                                             <img src="{{$image->getUrl(800, 800)}}" class="w-100 rounded-2"  alt="...">
                                         </div>
@@ -106,21 +106,6 @@
                             @endif
                         </div>     
                         <div>
-                            <div class="p-custom pt-5">
-                                <div class="card">
-                                    <div class="card-header">
-                                        {{__('ui.category')}}: {{$announcement_to_check->category->name}}
-                                    </div>
-                                    <div class="card-body">
-                                      <h5 class="card-title">{{$announcement_to_check->title}}</h5>
-                                        <p class="card-title pt-3"> <span class="fw-semibold"> Prezzo: </span>  {{$announcement_to_check->price}} €</p>   
-                                      <p class="py-2"> <span class="fw-semibold"> Descrizione: </span> <br> {{$announcement_to_check->body}}</p>
-                                    </div>
-                                    <div class="card-footer text-body-secondary">
-                                        {{__('ui.published_on')}}: {{$announcement_to_check->created_at->format('d/m/Y')}}
-                                    </div>
-                                  </div>
-                            </div>
                             <div class="p-custom">
                                 <p class="fs-2 py-2 text-uppercase border-bottom border-2 mt-2">{{__('ui.category')}}: {{$announcement_to_check->category->name}}</p>
                                 <h2 class="display-5 fw-bold">{{$announcement_to_check->title}}</h2>

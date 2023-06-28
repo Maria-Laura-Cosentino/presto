@@ -1,5 +1,5 @@
 <x-layout>
-    <div class="container my-5">
+    <div class="container my-5 mt-5">
         <div class="row g-0 my-5 flex-column-reverse flex-md-row">
             <div class="col-12 col-md-6">
                   <img src="/images/giovane-donna-che-posa-ricoperta-di-vernice-nera.jpg" class="img-fluid img-register" alt="...">

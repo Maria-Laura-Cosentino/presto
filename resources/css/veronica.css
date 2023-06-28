@@ -1,7 +1,14 @@
 /* navbar */
 .nav-bg{
-  background: rgb(202,202,202);
-  background: linear-gradient(180deg, rgba(202,202,202,1) 32%, rgba(255,255,255,0.7214285372352065) 100%);    
+  background: rgb(166,166,166);
+  background: linear-gradient(180deg, rgba(166,166,166,0.9623248957786239) 42%, rgba(255,255,255,0.6205882011007529) 99%);      
+}
+
+
+
+
+.icon-log:hover{
+  font-weight: 900;
 }
 
 .nav-cust{
@@ -10,17 +17,30 @@
   font-size: large;
   font-weight: bold;
   margin-top: 1px;
+  transition: 0.5s;
+  text-decoration: none;
+}
+
+.nav-cust:hover .icon-log{
+  font-weight: bold;
 }
 /* mouse over.nav-link*/
-.nav-cust:hover {
-  color: #000000;
+.nav-cust:hover{
+  color: rgb(214, 164, 0);
   background-color: transparent;
   text-decoration: underline;
+  text-shadow:1px 1px 20px rgb(255, 255, 255);
 }
 
 /* mouse active*/
-.nav-cust:active {
-  color: var(--yellow);
+.active-nav{
+  color: white!important;
+  font-weight: bold;
+  text-shadow: 1px 1px 20px rgb(70, 70, 70);
+  letter-spacing: 2px;
+}
+.active:hover{
+  text-shadow: 1px 1px 20px rgb(70, 70, 70);
 }
 
 .lett-space{
@@ -34,6 +54,12 @@
 
 .detail-cust{
   background:var(--yellow);
+  transition: 0.3s;
+}
+
+.detail-cust:hover{
+  background:var(--yellow);
+  font-size: 1.1rem;
 }
 /* fine navbar */
 
@@ -47,4 +73,15 @@
 
 .text-custom:hover{
   color: black;
+}
+
+.detail-cust2{
+  background:var(--yellow);
+  transition: 0.3s;
+  box-shadow: 1px 1px 15px #989898;
+}
+
+.detail-cust2:hover{
+  background:var(--yellow);
+  font-size: 1.3rem;
 }

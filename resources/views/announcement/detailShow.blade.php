@@ -1,5 +1,5 @@
 <x-layout>
-  <div class="container-fluid mb-4">
+  <div class="container-fluid mb-4 mt-5">
     <div class="row bg-body-tertiary py-5">
       <div class="col-12">
           <h1 class="text-center fw-semibold display-2">{{__('ui.detail')}}</h1>

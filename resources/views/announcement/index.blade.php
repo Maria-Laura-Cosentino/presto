@@ -1,5 +1,5 @@
 <x-layout>
-    <div class=" min-h-cust">
+    <div class="min-h-cust mt-5">
         <div class="container-fluid mb-4">
             <div class="row bg-body-tertiary py-5">
               <div class="col-12">

@@ -1,7 +1,7 @@
 <x-layout>
-    <div class="container-fluid mb-4">
+    <div class="container-fluid mb-4 mt-5">
         <div class="row bg-body-tertiary py-5">
-            <div class="col-12">
+            <div class="col-12 mt-5">
                 <h1 class="text-center fw-semibold display-2">
                     {{$announcement_to_restore ? 'Annunci revisionati' : 'Non ci sono annunci revisionati'}}
                 </h1>
@@ -76,7 +76,7 @@
         </div>
     </div>
     <div class="row justify-content-center mt-3">
-        <div class="col-3 col-md-1">
+        <div class="col-10 col-md-4 d-flex justify-content-center">
             {{$announcement_to_restore_t->links()}}
         </div>
       
