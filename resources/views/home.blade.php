@@ -57,7 +57,7 @@
         <div class="row justify-content-center">
             <div class="col-11 col-md-10 col-xl-8 row justify-content-center justify-content-md-between align-items-center">
                 <div class="col-12 col-md-4 p-2 sez1BigP">
-                    <p class="mb-2">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <p class="mb-2">Rendi la tua vita un capolavoro</p>
                 </div>
 
                 <div class=" col-12 col-md-2 p-2 py-0 px-1 d-flex d-md-block justify-content-center">
@@ -82,7 +82,7 @@
                 </div>
 
                 <div class=" col-12 col-md-4 p-2 text-center text-md-start black85 charSpace1 p-text-Sez1">
-                    <p class="mt-2">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Distinctio sit animi dolor, ducimus aspernatur quas nobis corrupti laboriosam fuga at accusamus beatae consectetur dolore, dicta odit.</p>
+                    <p class="mt-2">Diffondiamo le arti nel mondo con costante impegno e passione. Dal 2020 diamo la possibilità alle persone di riunirsi per creare, vendere, acquistare e collezionare articoli unici sul nostro marketplace.</p>
                 </div>
 
             </div>
