@@ -47,7 +47,7 @@
             </div>
         </div>
         <div class="col-md-6">
-          <div class="small mb-1">{{__('ui.category')}}: {{$announcement->category->name}}</div>
+          <div class="small mb-1 fw-semibold">{{__('ui.category')}}: {{$announcement->category->name}}</div>
           <h1 class="display-5 fw-bolder t-title">{{$announcement->title}}</h1>
           <div class="fs-5 mb-5">
               <span class="">{{$announcement->price}} €</span>
@@ -57,7 +57,7 @@
           <div class="card-footer my-5 pt-0 bg-transparent border-top-0">
             <div class="d-flex align-items-end justify-content-between">
                 <div class="d-flex align-items-center">
-                    <img class="rounded-circle me-3" src="https://dummyimage.com/100x100/ced4da/6c757d" alt="...">
+                    <img class="rounded-circle me-3" src="/images/icon-user.png" alt="...">
                     <div class="">
                         <div class="fs-5 mb-1">{{__('ui.created_by')}}:<span class="fw-semibold"> {{$announcement->user->name}}</span></div>
                         <div class="fs-5">{{__('ui.published_on')}}: <span class="fw-semibold">{{$announcement->created_at->format('d/m/Y')}}</span></div>

@@ -30,7 +30,7 @@ return [
     'password' => 'Password',
     'accept' => 'Accetta',
     'reject' => 'Rifiuta',
-    'languages' => 'Lingue',
+    'languages' => 'IT',
     'revised_announcements' => 'Annunci revisionati',
     'latest_announcements' => 'Ultimi annunci',
     'find_out_more' => 'Scopri di più',

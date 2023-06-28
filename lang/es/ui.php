@@ -31,7 +31,7 @@ return [
     'password' => 'Contraseña',
     'accept' => 'Acepta',
     'reject' => 'Rechaza',
-    'languages' => 'Idiomas',
+    'languages' => 'ES',
     'revised_announcements' => 'Anuncios revisados',
     'latest_announcements' => 'Últimos anuncios',
     'find_out_more' => 'Descubre más',

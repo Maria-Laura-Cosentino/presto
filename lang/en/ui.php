@@ -31,7 +31,7 @@ return [
     'password' => 'Password',
     'accept' => 'Accept',
     'reject' => 'Reject',
-    'languages' => 'Languages',
+    'languages' => 'EN',
     'revised_announcements' => 'Revised announcements',
     'latest_announcements' => 'Latest announcements',
     'find_out_more' => 'Find out more',
