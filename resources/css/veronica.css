@@ -1,13 +1,50 @@
-.btn.btn-outline-success:hover{
-    color: #fff;
-  }
-
-/* before link */
-.nav-cust::before {
-  color: #000000;
+/* navbar */
+.nav-bg{
+  background: rgb(202,202,202);
+  background: linear-gradient(180deg, rgba(202,202,202,1) 32%, rgba(255,255,255,0.7214285372352065) 100%);    
 }
 
+.nav-cust{
+  color: #2a2a2a;
+  letter-spacing: 1px;
+  font-size: large;
+  font-weight: bold;
+  margin-top: 1px;
+}
 /* mouse over.nav-link*/
 .nav-cust:hover {
-  color: #ffffff;
+  color: #000000;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+/* mouse active*/
+.nav-cust:active {
+  color: var(--yellow);
+}
+
+.lett-space{
+  letter-spacing: 2px;
+};
+
+.linkNav-cust{
+  letter-spacing: 1px;
+  text-decoration: solid;
+}
+
+.detail-cust{
+  background:var(--yellow);
+}
+/* fine navbar */
+
+/* footer */
+.text-custom{
+  color: rgb(230, 27, 27);
+}
+.text-custom:active{
+  color: var(--yellow)!important;
+}
+
+.text-custom:hover{
+  color: black;
 }

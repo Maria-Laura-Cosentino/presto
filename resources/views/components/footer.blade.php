@@ -3,44 +3,58 @@
       <div class="row p-3 justify-content-around align-content-center">
         <div class="col-lg-3 col-md-12 mb-4">
           <a href="{{route('home')}}"class="text-decoration-none text-reset fs-4"><i class="fa-brands fa-artstation fs-3 mb-3"></i><span class="fw-semibold ms-2">Presto.it</span></a>
-          <p>Developed by DreamTeamDevelopers
+          <p class="lett-space text-dark">Developed by DreamTeamDevelopers
             <i class="fa-solid fa-bug-slash" style="color: #000000;"></i>
           </p>
         </div>
-        <div class="col-lg-3 col-md-6 mb-4 text-end text-md-start text-xl-center">
+
+        <div class="col-lg-3 col-md-6 mb-4 text-center text-md-start text-xl-center">
           
-          {{-- lavora con noi --}}
-          <h5 class="mt-2 text-dark">{{__('ui.work_with_us')}}</h5>
-          <ul class="list-unstyled mb-0">
-            <li class="mb-1" style="color: #4a4747;">{{__('ui.want_to_join_us')}}</li>
-            
-            {{-- registrati --}}
-            @if(Auth::user() == null)
-            <li class="mb-1">
-              <a href="{{route('register')}}" class="text-decoration-none text-reset" style="color:#cacaca;">{{__('ui.register_and_click_here')}}</a>
-            </li>
-            @else
-             
-            @endif 
-          </ul>
+        {{-- se l'utente è revisore visualizza messaggi--}}
+          @if (Auth::user() && Auth::user()->is_revisor)
+          <li class="translate-bottom badge mt-3 text-center text-md-center text-xl-center">
+          <a href="{{route('revisor.index')}}" class="text-decoration-none text-reset">            
+            <button class="btn detail-cust nav-cust mt-2 {{App\Models\Announcement::toBeRevisionedCount() == 0 ? 'text-white' : 'text-danger' }}">Annunci da revisionare: {{App\Models\Announcement::toBeRevisionedCount()}}</button>
+            </a>  
+          </li>
+          @endif
+
+        {{-- login ok allora diventa revisore --}}       
+          @if (Auth::user() && Auth::user()->is_revisor == false)
+            <h5 class="mb-3 text-dark">{{__('ui.work_with_us')}}</h5>
+            <ul class="list-unstyled mb-0">
+               <li class="mb-1" style="color: #4a4747;">{{__('ui.want_to_join_us')}}</li>
+               <li class="m-3"><a href="{{route('be.revisor')}}" class="text-decoration-none text-custom" style="color:#cacaca;">{{__('ui.already_have_an_account')}}</a></li>
+               <button class="btn detail-cust fw-bold nav-cust mb-2"><a href="{{route('be.revisor')}}" class="text-decoration-none text-reset">{{__('ui.become_an_editor')}}</a></button>
+          @endif  
+
+        {{-- login ko allora registrati --}}
+          @if(Auth::user() == null)
+            <h5 class="mt-2 text-dark">{{__('ui.work_with_us')}}</h5>
+             <button class="btn detail-cust fw-bold nav-cust text-dark mt-3">
+               <a href="{{route('register')}}" class="text-decoration-none text-reset" style="color:#cacaca;">{{__('ui.register_and_click_here')}}</a>
+             </button>  
+          @endif                          
+            </ul>
         </div>
         
         {{-- lingue --}}
         <div class="col-lg-3 col-md-6 mb-4">
-          <h5 class="mt-2 text-dark text-end">{{__('ui.languages')}}</h5>
-          <ul class="nav-item text-end" id="lingue">
+          <h5 class="mt-2 text-dark text-center text-md-end">{{__('ui.languages')}}</h5>
+          <div class="text-center d-flex p-0 justify-content-md-end justify-content-center" id="lingue">
             <x-_locale lang="it"/>
+            <div class="" style="width: 15px"></div>
             <x-_locale lang="en"/>
+            <div class="" style="width: 15px"></div>
             <x-_locale lang="es"/>
-          </ul>       
+          </div>       
         </div>
       </div>
     </div>
     
     {{-- copyright --}}
-    <div class="text-center p-3" style="background-color: rgb(42, 42, 42); color:#cacaca;">
-      © 2023 Company, Inc
+    <div class="text-center p-3 lett-space" style="background-color: #2a2a2a; color:#cacaca;">
+      © 2023 Presto.it
     </div>
   </footer>  
-  
   
