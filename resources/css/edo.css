@@ -388,7 +388,7 @@ body {
 max-width: 2200px;
 }
 .sez3_MDtoXL{
-    display: block;
+    display: flex;
 }
 @media screen and (max-width: 800px) {
     .sez3_MDtoXL{
@@ -440,8 +440,8 @@ max-width: 2200px;
 }
 @media screen and (max-width: 1200px) {
     .circleCust{
-        height: calc(6vh + 7vw);
-        width: calc(6vh + 7vw);
+        height: calc(7vh + 8vw);
+        width: calc(7vh + 8vw);
         border: 5px dotted var(--black85);
         
     }
@@ -457,8 +457,8 @@ max-width: 2200px;
 
 @media screen and (min-width: 1201px) and (max-width: 1800px) {
     .circleCust{
-        height: calc(6vh + 7vw);
-        width: calc(6vh + 7vw);
+        height: calc(7vh + 8vw);
+        width: calc(7vh + 8vw);
         border: 6px dotted var(--black85);
     }
     .h4-Sez5{
@@ -522,6 +522,16 @@ max-width: 2200px;
 }
 
 
+.containerCustom{
+    overflow-x: scroll;
+    white-space: nowrap;
+    width: 100%;
+}
+
+.content{
+   display: inline-block;
+   margin-right: 30px;
+}
 /* index annunci */
 .min-h-cust{
     min-height: 80vh;

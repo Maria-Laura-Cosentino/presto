@@ -3,7 +3,7 @@
         <div class="row bg-body-tertiary py-5">
             <div class="col-12">
                 <h1 class="text-center fw-semibold display-2">
-                    {{$announcement_to_check ? 'Ecco l\'annuncio da revisionare' : 'Non ci sono annunci da revisionare'}}
+                    {{$announcement_to_check ? __('ui.announcements_to_review') : __('ui.there_are_no_announcements_to_review')}}
                 </h1>
             </div>
         </div>
@@ -61,12 +61,12 @@
                                                 </div>
                                                 <hr>
                                                 <div class="card-body">
-                                                    <h5>Revisione immagini</h5>
-                                                    <p> Adulti: <span class="{{$image->adult}}"> </span></p> 
-                                                    <p> Satira: <span class="{{$image->spoof}}"> </span></p>
-                                                    <p> Medicina: <span class="{{$image->medical}}"> </span></p>
-                                                    <p> Violenza: <span class="{{$image->violence}}"> </span></p>
-                                                    <p> Contenuto ammiccante: <span class="{{$image->racy}}"> </span></p>
+                                                    <h5>{{__('ui.image_review')}}</h5>
+                                                    <p> {{__('ui.adult')}}: <span class="{{$image->adult}}"> </span></p> 
+                                                    <p> {{__('ui.spoof')}}: <span class="{{$image->spoof}}"> </span></p>
+                                                    <p> {{__('ui.medical')}}: <span class="{{$image->medical}}"> </span></p>
+                                                    <p> {{__('ui.violence')}}: <span class="{{$image->violence}}"> </span></p>
+                                                    <p> {{__('ui.racy')}}: <span class="{{$image->racy}}"> </span></p>
                                                 </div>
                                             </div>
                                         </div>
@@ -106,6 +106,21 @@
                             @endif
                         </div>     
                         <div>
+                            <div class="p-custom pt-5">
+                                <div class="card">
+                                    <div class="card-header">
+                                        {{__('ui.category')}}: {{$announcement_to_check->category->name}}
+                                    </div>
+                                    <div class="card-body">
+                                      <h5 class="card-title">{{$announcement_to_check->title}}</h5>
+                                        <p class="card-title pt-3"> <span class="fw-semibold"> {{__('ui.price')}}: </span>  {{$announcement_to_check->price}} €</p>   
+                                      <p class="py-2"> <span class="fw-semibold"> {{__('ui.description')}}: </span> <br> {{$announcement_to_check->body}}</p>
+                                    </div>
+                                    <div class="card-footer text-body-secondary">
+                                        {{__('ui.published_on')}}: {{$announcement_to_check->created_at->format('d/m/Y')}}
+                                    </div>
+                                  </div>
+                            </div>
                             <div class="p-custom">
                                 <p class="fs-2 py-2 text-uppercase border-bottom border-2 mt-2">{{__('ui.category')}}: {{$announcement_to_check->category->name}}</p>
                                 <h2 class="display-5 fw-bold">{{$announcement_to_check->title}}</h2>
