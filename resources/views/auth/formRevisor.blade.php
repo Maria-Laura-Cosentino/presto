@@ -1,14 +1,14 @@
 <x-layout>
   <div class="main_min_h2">
     <div class="container my-5">
-            <div class="row my-5">
+            <div class="row marginCustBeEditor">
                 @if (session()->has('message'))
                 <div class="alert alert-success">
                 {{session('message')}}
                 </div>
                 @endif
             </div>
-            <div class="row my-5">
+            <div class="row mt-1 mb-5">
                 <main class="form-signin w-100 m-auto">
                   <form method="post" action="{{route('become.revisor')}}" class="p-4 p-md-5 border rounded-3 bg-body-tertiary my-5">
                     @csrf

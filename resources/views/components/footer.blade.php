@@ -3,7 +3,7 @@
       <div class="row p-3 justify-content-around align-content-center">
         <div class="col-lg-3 col-md-12 mb-4">
           <a href="{{route('home')}}"class="text-decoration-none text-reset fs-4"><i class="fa-brands fa-artstation fs-3 mb-3"></i><span class="fw-semibold ms-2">Presto.it</span></a>
-          <p class="lett-space text-dark">Developed by DreamTeamDevelopers
+          <p class="lett-space text-dark">Developed by DevelopersDreamTeam
             <i class="fa-solid fa-bug-slash" style="color: #000000;"></i>
           </p>
         </div>

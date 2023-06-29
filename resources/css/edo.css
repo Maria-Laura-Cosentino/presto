@@ -561,3 +561,7 @@ max-width: 2200px;
 .refresh:hover{
     font-size: 1.7rem;
 }
+
+.marginCustBeEditor{
+    margin-top: 200px;
+}
